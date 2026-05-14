@@ -1,137 +1,126 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thai Villa Group</title>
-<<style>
-
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#061426;
-  color:white;
-}
-
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 60px;
-  background:#081c38;
-}
-
-.logo{
-  font-size:28px;
-  font-weight:bold;
-  color:#7dd3fc;
-}
-
-nav a{
-  color:white;
-  margin-left:20px;
-  text-decoration:none;
-}
-
-.hero{
-  height:80vh;
-  background:linear-gradient(135deg,#0f3b82,#061426);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
-.hero h1{
-  font-size:58px;
-  margin-bottom:20px;
-}
-
-.hero p{
-  font-size:24px;
-  color:#cbd5e1;
-}
-
-button{
-  margin-top:25px;
-  padding:14px 28px;
-  border:none;
-  border-radius:8px;
-  background:#2563eb;
-  color:white;
-  font-size:18px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  padding:60px;
-}
-
-.card{
-  background:#0b2447;
-  border:1px solid #1e40af;
-  padding:30px;
-  border-radius:16px;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  background:#08111f;
-}
-
-</style>>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thai Villa Group | Modular Villas Apartments Hotels</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#061426;color:white}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(6,20,38,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(125,211,252,.18)}
+.logo{font-size:26px;font-weight:800;color:#7dd3fc;letter-spacing:1px}
+nav a{margin-left:24px;color:#dbeafe;font-size:15px}
+.hero{min-height:88vh;display:flex;align-items:center;padding:90px 7%;background:radial-gradient(circle at 75% 20%,rgba(14,165,233,.45),transparent 35%),linear-gradient(135deg,#0f3b82,#061426 62%)}
+.hero-content{max-width:850px}
+.badge{display:inline-block;padding:8px 14px;border:1px solid rgba(125,211,252,.35);border-radius:999px;color:#bae6fd;margin-bottom:24px}
+h1{font-size:64px;line-height:1.05;margin:0 0 24px}
+.hero p{font-size:24px;color:#dbeafe;line-height:1.6}
+.btns{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{padding:15px 26px;border-radius:999px;background:#2563eb;color:white;font-weight:700}
+.btn.alt{background:transparent;border:1px solid rgba(255,255,255,.35)}
+section{padding:80px 7%}
+.title{text-align:center;margin-bottom:48px}
+.title h2{font-size:42px;margin:0;color:#7dd3fc}
+.title p{color:#cbd5e1;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:#0b2447;border:1px solid rgba(125,211,252,.22);border-radius:22px;padding:30px;min-height:210px}
+.card h3{font-size:24px;margin-top:0;color:#e0f2fe}
+.card p{color:#cbd5e1;line-height:1.7}
+.showcase{background:#08244a}
+.product{height:330px;border-radius:26px;padding:26px;display:flex;align-items:end;background:linear-gradient(135deg,#2563eb,#0f172a);border:1px solid rgba(125,211,252,.25)}
+.product:nth-child(2){background:linear-gradient(135deg,#0ea5e9,#172554)}
+.product:nth-child(3){background:linear-gradient(135deg,#1d4ed8,#020617)}
+.product:nth-child(4){background:linear-gradient(135deg,#38bdf8,#1e293b)}
+.product h3{font-size:28px;margin:0}
+.price{font-size:20px;color:#93c5fd;font-weight:700}
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;text-align:center}
+.step{padding:26px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(125,211,252,.18)}
+.contact{text-align:center;background:linear-gradient(135deg,#0f3b82,#061426)}
+.contact h2{font-size:46px}
+footer{text-align:center;padding:30px;background:#030b16;color:#94a3b8}
+.float{position:fixed;right:22px;bottom:22px;background:#22c55e;color:white;padding:15px 22px;border-radius:999px;font-weight:800;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+@media(max-width:700px){h1{font-size:42px}.hero p{font-size:18px}nav{display:none}}
+</style>
 </head>
-<body>
 
+<body>
 <header>
   <div class="logo">THAI VILLA GROUP</div>
-
   <nav>
-    <a href="#">首页</a>
-    <a href="#">别墅</a>
-    <a href="#">酒店</a>
-    <a href="#">公寓</a>
-    <a href="#">联系我们</a>
+    <a href="#products">产品</a>
+    <a href="#villa">别墅</a>
+    <a href="#factory">工厂</a>
+    <a href="#contact">联系</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="overlay">
-    <h1>泰国模块化别墅与酒店解决方案</h1>
-
-    <p>
-      Modern Modular Villas · Apartments · Hotels
-    </p>
-
-    <button>WhatsApp咨询</button>
+  <div class="hero-content">
+    <div class="badge">Thailand Modular Building Solutions</div>
+    <h1>泰国模块化别墅、公寓与酒店解决方案</h1>
+    <p>专注装配式建筑、精装别墅、员工公寓、精品酒店与定制办公室。设计、生产、运输、安装一站式交付。</p>
+    <div class="btns">
+      <a class="btn" href="#contact">WhatsApp 咨询</a>
+      <a class="btn alt" href="#villa">查看产品系列</a>
+    </div>
   </div>
 </section>
 
-<section class="cards">
-
-  <div class="card">
-    <h2>模块化别墅</h2>
-    <p>50㎡ - 260㎡ 高端装配式住宅</p>
+<section id="products">
+  <div class="title">
+    <h2>核心优势</h2>
+    <p>高效 · 优质 · 灵活 · 经济</p>
   </div>
-
-  <div class="card">
-    <h2>精品酒店</h2>
-    <p>快速部署 · 度假村 · 营地酒店</p>
+  <div class="grid">
+    <div class="card"><h3>快速交付</h3><p>工厂预制，现场组装，缩短建设周期，适合快速落地项目。</p></div>
+    <div class="card"><h3>成本可控</h3><p>标准化生产，减少现场浪费，价格透明，投资回报更清晰。</p></div>
+    <div class="card"><h3>品质稳定</h3><p>构件工厂化生产，质量流程可控，适合批量复制。</p></div>
+    <div class="card"><h3>灵活定制</h3><p>支持别墅、公寓、酒店、办公室等多场景模块组合。</p></div>
   </div>
+</section>
 
-  <div class="card">
-    <h2>模块化公寓</h2>
-    <p>员工宿舍 · 出租公寓 · 社区住宅</p>
+<section class="showcase" id="villa">
+  <div class="title">
+    <h2>产品矩阵</h2>
+    <p>满足企业配套、度假地产、酒店营地多种需求</p>
   </div>
+  <div class="grid">
+    <div class="product"><div><h3>精装别墅</h3><p>50–260㎡</p><div class="price">12900泰铢/㎡起</div></div></div>
+    <div class="product"><div><h3>精装公寓</h3><p>25–60㎡/间</p><div class="price">最快3个月交付</div></div></div>
+    <div class="product"><div><h3>精品酒店</h3><p>800–4000㎡</p><div class="price">支持定制</div></div></div>
+    <div class="product"><div><h3>定制办公室</h3><p>50–500㎡</p><div class="price">快速部署</div></div></div>
+  </div>
+</section>
 
+<section id="factory">
+  <div class="title">
+    <h2>服务流程</h2>
+    <p>从需求沟通到验收交付</p>
+  </div>
+  <div class="process">
+    <div class="step">01<br>需求沟通</div>
+    <div class="step">02<br>方案设计</div>
+    <div class="step">03<br>合同签订</div>
+    <div class="step">04<br>工厂生产</div>
+    <div class="step">05<br>现场安装</div>
+    <div class="step">06<br>验收交付</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>告诉我们你的土地、预算和用途</h2>
+  <p>我们为你推荐模块化别墅、公寓、酒店或办公室方案。</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn" href="mailto:shistone268@gmail.com">发送邮件</a>
+    <a class="btn alt" href="#">WhatsApp 咨询</a>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Thai Villa Group</p>
+  © 2026 Thai Villa Group · Modular Villas · Apartments · Hotels
 </footer>
 
+<a class="float" href="#contact">立即咨询</a>
 </body>
 </html>
