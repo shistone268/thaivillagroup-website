@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,15 @@
       name="description"
       content="Thai Villa Group supplies modular villas, apartments, hotels, and offices for developers, resorts, and private owners in Thailand."
     />
+    <link rel="canonical" href="https://www.thaivillagroup.com/" />
+    <meta property="og:title" content="Thai Villa Group | Modular Villas, Apartments, Hotels & Offices" />
+    <meta
+      property="og:description"
+      content="Premium modular villa, apartment, hotel, and office solutions for Thailand developers, resorts, and private land owners."
+    />
+    <meta property="og:url" content="https://www.thaivillagroup.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.thaivillagroup.com/assets/hero-villa.jpg" />
     <title>Thai Villa Group | Modular Villas, Apartments, Hotels & Offices</title>
     <style>
       :root {
@@ -21,7 +30,7 @@
         --white: #ffffff;
         --gold: #c99a3b;
         --shadow: 0 24px 60px rgba(7, 27, 58, 0.14);
-      
+      }
 
       * {
         box-sizing: border-box;
@@ -102,10 +111,42 @@
       .menu {
         display: flex;
         align-items: center;
-        gap: 24px;
+        gap: 18px;
         color: #334761;
         font-size: 14px;
         font-weight: 700;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .lang-switch {
+        display: inline-flex;
+        padding: 4px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.84);
+      }
+
+      .lang-switch button {
+        min-width: 38px;
+        height: 32px;
+        border: 0;
+        border-radius: 6px;
+        color: #334761;
+        background: transparent;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 900;
+        cursor: pointer;
+      }
+
+      .lang-switch button.is-active {
+        color: var(--white);
+        background: var(--blue);
       }
 
       .nav-cta,
@@ -140,7 +181,7 @@
         overflow: hidden;
         background:
           linear-gradient(90deg, rgba(7, 27, 58, 0.9), rgba(7, 27, 58, 0.52) 48%, rgba(7, 27, 58, 0.16)),
-          url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2200&q=85") center / cover;
+          url("assets/hero-cover.avif") center / cover;
       }
 
       .hero::after {
@@ -204,6 +245,20 @@
         margin-top: 36px;
       }
 
+      .hero-note {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 22px;
+        padding: 10px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 6px;
+        color: #edf6ff;
+        background: rgba(7, 27, 58, 0.34);
+        font-size: 14px;
+        font-weight: 800;
+        backdrop-filter: blur(10px);
+      }
+
       .hero-metrics {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -238,6 +293,40 @@
 
       section {
         padding: 92px 0;
+      }
+
+      .solution-band {
+        padding: 42px 0;
+        background: var(--navy);
+        color: var(--white);
+      }
+
+      .solution-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .solution-item {
+        min-height: 138px;
+        padding: 26px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .solution-item strong {
+        display: block;
+        color: #ffffff;
+        font-size: 18px;
+      }
+
+      .solution-item span {
+        display: block;
+        margin-top: 10px;
+        color: #cfe0f5;
+        line-height: 1.55;
       }
 
       .section-head {
@@ -296,23 +385,47 @@
       }
 
       .villa {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.15), rgba(22, 103, 199, 0.1)), url("https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1000&q=80");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.15), rgba(22, 103, 199, 0.1)), url("assets/product-villa-200.png");
       }
 
       .apartment {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.15), rgba(22, 103, 199, 0.1)), url("https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(22, 103, 199, 0.06)), url("assets/product-apartment.jpg");
+        background-position: center;
       }
 
       .hotel {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.15), rgba(22, 103, 199, 0.1)), url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.1), rgba(22, 103, 199, 0.08)), url("assets/product-hotel.png");
+        background-position: center;
       }
 
       .office {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.2), rgba(22, 103, 199, 0.12)), url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.2), rgba(22, 103, 199, 0.12)), url("assets/site-photo-01.jpg");
       }
 
       .product-body {
         padding: 24px;
+      }
+
+      .spec-list {
+        display: grid;
+        gap: 9px;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .spec-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 9px;
+        border-top: 1px solid #edf3fa;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .spec-list b {
+        color: var(--navy);
       }
 
       .product-body h3,
@@ -371,7 +484,7 @@
 
       .project-main .project-image {
         min-height: 464px;
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=85");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/site-photo-07.jpg");
       }
 
       .project-side {
@@ -380,22 +493,360 @@
       }
 
       .project-side .project-card:nth-child(1) .project-image {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1100&q=85");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/project-apartment-cluster.jpg");
+        background-position: center;
       }
 
       .project-side .project-card:nth-child(2) .project-image {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=85");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/project-boutique-hotel.png");
+        background-position: center;
+      }
+
+      .plans {
+        background: var(--paper);
+      }
+
+      .detail-section {
+        display: none;
+      }
+
+      .detail-section.is-open {
+        display: block;
+      }
+
+      .plans-intro {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 28px;
+        align-items: stretch;
+        margin-bottom: 34px;
+      }
+
+      .plans-visual {
+        min-height: 360px;
+        border-radius: 8px;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)),
+          url("assets/project-villa-a.jpg") center / cover;
+        box-shadow: var(--shadow);
+      }
+
+      .plans-copy {
+        display: grid;
+        align-content: center;
+        padding: 36px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+      }
+
+      .plans-copy h3 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.08;
+      }
+
+      .plans-copy p {
+        margin: 18px 0 0;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+
+      .villa-entry {
+        margin-top: 32px;
+        padding: 28px;
+        border: 1px solid rgba(201, 154, 59, 0.42);
+        border-radius: 8px;
+        background: linear-gradient(135deg, #ffffff, #f3f8ff);
+        box-shadow: 0 18px 46px rgba(7, 27, 58, 0.08);
+      }
+
+      .villa-entry h3 {
+        margin: 0;
+        color: var(--navy);
+        font-size: 26px;
+      }
+
+      .villa-entry p {
+        max-width: 760px;
+        margin: 12px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .villa-entry .btn {
+        margin-top: 20px;
+      }
+
+      .entry-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .villa-type-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 18px;
+        margin-bottom: 34px;
+      }
+
+      .villa-type-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 14px 34px rgba(7, 27, 58, 0.06);
+      }
+
+      .villa-type-media {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .villa-type-media img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .villa-type-media > img:nth-child(2),
+      .villa-plan-pair img {
+        height: 170px;
+        object-fit: contain;
+        padding: 10px;
+        background: #ffffff;
+        border-top: 1px solid var(--line);
+      }
+
+      .villa-plan-pair {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .villa-plan-pair img + img {
+        border-left: 0;
+      }
+
+      .villa-plan-pair img {
+        height: 260px;
+      }
+
+      .villa-type-body {
+        padding: 18px;
+      }
+
+      .villa-type-body h3 {
+        margin: 0;
+        color: var(--navy);
+        font-size: 20px;
+      }
+
+      .villa-type-body p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .hospitality {
+        background: var(--white);
+      }
+
+      .hospitality + .hospitality {
+        padding-top: 0;
+      }
+
+      .hospitality-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .hospitality-shot {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 14px 34px rgba(7, 27, 58, 0.06);
+      }
+
+      .hospitality-shot img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .hospitality-shot figcaption {
+        padding: 16px 18px;
+        color: var(--navy);
+        font-weight: 900;
+      }
+
+      .type-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 34px;
+      }
+
+      .type-card {
+        min-height: 230px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 14px 34px rgba(7, 27, 58, 0.06);
+      }
+
+      .type-card.featured {
+        border-color: rgba(201, 154, 59, 0.72);
+        box-shadow: 0 18px 40px rgba(201, 154, 59, 0.14);
+      }
+
+      .type-size {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 12px;
+        border-radius: 5px;
+        color: var(--white);
+        background: var(--blue);
+        font-weight: 900;
+      }
+
+      .type-card h3 {
+        margin: 18px 0 0;
+        color: var(--navy);
+        font-size: 21px;
+      }
+
+      .type-card p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .type-card ul {
+        margin: 16px 0 0;
+        padding-left: 18px;
+        color: #334761;
+        line-height: 1.7;
+      }
+
+      .plan-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .plan-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 14px 34px rgba(7, 27, 58, 0.06);
+      }
+
+      .plan-card.dual {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .villa-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      .villa-shot {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 14px 34px rgba(7, 27, 58, 0.06);
+      }
+
+      .villa-shot img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+      }
+
+      .villa-shot figcaption {
+        padding: 16px 18px;
+      }
+
+      .villa-shot strong {
+        display: block;
+        color: var(--navy);
+        font-size: 16px;
+      }
+
+      .villa-shot span {
+        display: block;
+        margin-top: 7px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .plan-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .plan-main img {
+        max-height: 640px;
+        object-fit: contain;
+        background: #ffffff;
+      }
+
+      .plan-caption {
+        padding: 20px 22px;
+      }
+
+      .plan-caption h3 {
+        margin: 0;
+        color: var(--navy);
+      }
+
+      .plan-caption p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        line-height: 1.6;
       }
 
       .project-body {
         padding: 22px;
       }
 
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .project-meta span {
+        padding: 7px 10px;
+        border-radius: 5px;
+        color: var(--navy);
+        background: #f0f6ff;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
       .factory {
         color: var(--white);
         background:
           linear-gradient(135deg, rgba(7, 27, 58, 0.96), rgba(11, 79, 159, 0.9)),
-          url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=80") center / cover;
+          url("assets/site-photo-04.jpg") center / cover;
       }
 
       .factory .section-head h2,
@@ -460,7 +911,7 @@
       .contact {
         background:
           linear-gradient(90deg, rgba(246, 249, 253, 0.96), rgba(246, 249, 253, 0.84)),
-          url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=80") center / cover;
+          url("assets/site-photo-08.jpg") center / cover;
       }
 
       .contact-layout {
@@ -478,6 +929,40 @@
         display: grid;
         gap: 16px;
         margin-top: 24px;
+      }
+
+      .line-qr-card {
+        display: grid;
+        grid-template-columns: 128px 1fr;
+        gap: 18px;
+        align-items: center;
+        margin-top: 24px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+      }
+
+      .line-qr-card img {
+        width: 128px;
+        height: 128px;
+        object-fit: contain;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #ffffff;
+      }
+
+      .line-qr-card strong {
+        display: block;
+        color: var(--navy);
+        font-size: 19px;
+      }
+
+      .line-qr-card span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        line-height: 1.55;
       }
 
       .contact-row {
@@ -564,9 +1049,30 @@
         font-weight: 900;
       }
 
+      .line-float {
+        position: fixed;
+        right: 22px;
+        bottom: 92px;
+        z-index: 30;
+        width: 58px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        background: #06c755;
+        box-shadow: 0 18px 36px rgba(6, 199, 85, 0.34);
+        font-size: 19px;
+        font-weight: 900;
+      }
+
       @media (max-width: 980px) {
         .menu {
           display: none;
+        }
+
+        .nav-actions {
+          margin-left: auto;
         }
 
         .hero,
@@ -576,12 +1082,20 @@
 
         .section-head,
         .contact-layout,
-        .project-grid {
+        .project-grid,
+        .plans-intro,
+        .plan-card.dual,
+        .plan-grid {
           grid-template-columns: 1fr;
           display: grid;
         }
 
         .product-grid,
+        .solution-grid,
+        .villa-gallery,
+        .villa-type-grid,
+        .hospitality-gallery,
+        .type-grid,
         .factory-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -604,6 +1118,10 @@
           display: none;
         }
 
+        .lang-switch button {
+          min-width: 34px;
+        }
+
         .brand-mark {
           width: 38px;
           height: 38px;
@@ -611,7 +1129,6 @@
 
         .hero {
           min-height: 680px;
-          background-position: 58% center;
         }
 
         .hero-inner {
@@ -625,9 +1142,22 @@
 
         .hero-metrics,
         .product-grid,
+        .solution-grid,
+        .villa-gallery,
+        .villa-type-grid,
+        .hospitality-gallery,
+        .type-grid,
         .factory-grid,
         .steps {
           grid-template-columns: 1fr;
+        }
+
+        .plans-visual {
+          min-height: 240px;
+        }
+
+        .plans-copy {
+          padding: 26px;
         }
 
         .metric {
@@ -656,6 +1186,15 @@
           right: 16px;
           bottom: 16px;
         }
+
+        .line-float {
+          right: 16px;
+          bottom: 84px;
+        }
+
+        .line-qr-card {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -669,11 +1208,21 @@
         <nav class="menu" aria-label="Main navigation">
           <a href="#products">Products</a>
           <a href="#projects">Projects</a>
+          <a href="#villa-types">Villa Types</a>
+          <a href="#hotel-interiors">Hotel</a>
+          <a href="#apartment-interiors">Apartment</a>
           <a href="#factory">Factory</a>
           <a href="#process">Process</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a class="nav-cta" href="#contact">Get a Quote</a>
+        <div class="nav-actions">
+          <div class="lang-switch" aria-label="Language switcher">
+            <button type="button" class="is-active" data-lang="en">EN</button>
+            <button type="button" data-lang="zh">中</button>
+            <button type="button" data-lang="th">TH</button>
+          </div>
+          <a class="nav-cta" href="#contact">Get a Quote</a>
+        </div>
       </div>
     </header>
 
@@ -684,18 +1233,30 @@
             <span class="eyebrow">Thailand modular villa specialist</span>
             <h1>Thai Villa Group</h1>
             <p>
-              High-end modular villas, apartments, hotels, and offices designed for fast delivery,
-              reliable construction quality, and tropical living in Thailand.
+              Premium modular villa solutions for Thailand developers, resorts, and private land owners.
+              Choose a 50-200 sqm villa type, review floor plans, and request a clear quotation for your project.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#products">Explore Products</a>
-              <a class="btn btn-secondary" href="#projects">View Projects</a>
+              <a class="btn btn-primary" href="#villa-types">View Villa Types</a>
+              <a class="btn btn-secondary" href="#contact">Request Quotation</a>
             </div>
+            <div class="hero-note">For resorts, rental villas, staff housing, family homes, and project offices in Thailand</div>
             <div class="hero-metrics" aria-label="Company highlights">
-              <div class="metric"><strong>4</strong><span>Core modular product systems</span></div>
-              <div class="metric"><strong>30-60</strong><span>Day target production cycle</span></div>
-              <div class="metric"><strong>TH</strong><span>Built for Thailand resorts and developers</span></div>
+              <div class="metric"><strong>50-200</strong><span>sqm villa type guide for project planning</span></div>
+              <div class="metric"><strong>4</strong><span>Villa, apartment, hotel, and office systems</span></div>
+              <div class="metric"><strong>TH</strong><span>Designed for Thailand climate and resort use</span></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="solution-band" aria-label="Modular villa value points">
+        <div class="shell">
+          <div class="solution-grid">
+            <div class="solution-item"><strong>Clear Area Options</strong><span>Use 50-200 sqm types to match land size, room count, and budget range.</span></div>
+            <div class="solution-item"><strong>Fast Project Start</strong><span>Begin from a reference layout, then adjust facade, terrace, rooms, and finish level.</span></div>
+            <div class="solution-item"><strong>Thailand Ready</strong><span>Planning for heat, rain, rental use, resort operations, and local installation needs.</span></div>
+            <div class="solution-item"><strong>Quotation Support</strong><span>Send land size and target style; receive a proposal direction and material scope.</span></div>
           </div>
         </div>
       </section>
@@ -715,7 +1276,14 @@
               <div class="product-body">
                 <h3>Modular Villas</h3>
                 <p>Premium villa units for resorts, private estates, beachfront land, and rental investment projects.</p>
+                <ul class="spec-list">
+                  <li><b>Area</b><span>50-200 sqm</span></li>
+                  <li><b>Best for</b><span>Pool villas, resorts, private homes</span></li>
+                </ul>
                 <div class="tag-row"><span class="tag">Pool Villa</span><span class="tag">Resort</span><span class="tag">Luxury</span></div>
+                <div class="entry-actions">
+                  <a class="btn btn-primary" href="#villa-types">Open Villa Type Guide</a>
+                </div>
               </div>
             </article>
             <article class="product-card">
@@ -723,7 +1291,14 @@
               <div class="product-body">
                 <h3>Apartments</h3>
                 <p>Efficient modular apartments for staff housing, rental buildings, student housing, and mixed-use sites.</p>
+                <ul class="spec-list">
+                  <li><b>Layout</b><span>Studio to multi-room blocks</span></li>
+                  <li><b>Best for</b><span>Rental income and staff housing</span></li>
+                </ul>
                 <div class="tag-row"><span class="tag">Rental</span><span class="tag">Staff Housing</span><span class="tag">Urban</span></div>
+                <div class="entry-actions">
+                  <a class="btn btn-primary" href="#apartment-interiors">Open Apartment Interiors</a>
+                </div>
               </div>
             </article>
             <article class="product-card">
@@ -731,7 +1306,14 @@
               <div class="product-body">
                 <h3>Hotels</h3>
                 <p>Expandable hotel rooms and resort suites built for fast project rollout and consistent guest experience.</p>
+                <ul class="spec-list">
+                  <li><b>Module</b><span>Guest room, suite, service block</span></li>
+                  <li><b>Best for</b><span>Boutique hotel expansion</span></li>
+                </ul>
                 <div class="tag-row"><span class="tag">Boutique Hotel</span><span class="tag">Resort Suite</span></div>
+                <div class="entry-actions">
+                  <a class="btn btn-primary" href="#hotel-interiors">Open Hotel Interiors</a>
+                </div>
               </div>
             </article>
             <article class="product-card">
@@ -739,6 +1321,10 @@
               <div class="product-body">
                 <h3>Offices</h3>
                 <p>Clean, durable office modules for site offices, sales galleries, workspaces, and project operations.</p>
+                <ul class="spec-list">
+                  <li><b>Use</b><span>Sales office, site office, workspace</span></li>
+                  <li><b>Best for</b><span>Project launch and temporary teams</span></li>
+                </ul>
                 <div class="tag-row"><span class="tag">Site Office</span><span class="tag">Workspace</span><span class="tag">Sales Office</span></div>
               </div>
             </article>
@@ -758,6 +1344,7 @@
               <div class="project-body">
                 <h3>Resort Villa Community</h3>
                 <p>Detached modular villas arranged around landscaped outdoor living, pool decks, and guest pathways.</p>
+                <div class="project-meta"><span>50-200 sqm villas</span><span>Pool deck option</span><span>Rental operation ready</span></div>
               </div>
             </article>
             <div class="project-side">
@@ -766,6 +1353,7 @@
                 <div class="project-body">
                   <h3>Apartment Cluster</h3>
                   <p>Compact modular residential blocks for rental income and staff accommodation.</p>
+                  <div class="project-meta"><span>Repeatable blocks</span><span>Fast rollout</span></div>
                 </div>
               </article>
               <article class="project-card">
@@ -773,9 +1361,183 @@
                 <div class="project-body">
                   <h3>Boutique Hotel Suite</h3>
                   <p>Repeatable room modules designed to shorten hospitality project delivery timelines.</p>
+                  <div class="project-meta"><span>Guest rooms</span><span>Suite modules</span></div>
                 </div>
               </article>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="plans detail-section" id="villa-types">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Villa type introduction: effects, layouts, and floor plans</h2>
+            <p>PDF renderings and floor plan references are gathered here so customers can choose a villa type before quotation.</p>
+          </div>
+          <div class="plans-intro">
+            <div class="plans-visual" role="img" aria-label="Premium modular villa reference"></div>
+            <div class="plans-copy">
+              <h3>Start from a proven villa type, then customize for your land.</h3>
+              <p>
+                First review exterior renderings and interior references from the PDF, then choose a 50-200 sqm
+                size range and send the floor plan reference for quotation.
+              </p>
+              <div class="tag-row"><span class="tag">Private Land</span><span class="tag">Resort Rental</span><span class="tag">Pool Villa</span><span class="tag">Staff Housing</span></div>
+            </div>
+          </div>
+          <div class="villa-gallery" aria-label="Villa application scenario references">
+            <figure class="villa-shot">
+              <img src="assets/site-photo-02.jpg" alt="Private land for villa development" />
+              <figcaption><strong>Private Land</strong><span>For customers who already own land and want to place a modular villa on site.</span></figcaption>
+            </figure>
+            <figure class="villa-shot">
+              <img src="assets/site-photo-05.jpg" alt="Resort rental villa setting" />
+              <figcaption><strong>Resort Rental</strong><span>For resort operators and investors planning villas for short-stay rental income.</span></figcaption>
+            </figure>
+            <figure class="villa-shot">
+              <img src="assets/site-photo-03.jpg" alt="Pool villa leisure area" />
+              <figcaption><strong>Pool Villa</strong><span>For higher-end private or rental villas with outdoor leisure and pool deck planning.</span></figcaption>
+            </figure>
+            <figure class="villa-shot">
+              <img src="assets/project-apartment-cluster.jpg" alt="Staff housing modular accommodation" />
+              <figcaption><strong>Staff Housing</strong><span>For project teams, factory staff, resort employees, and temporary accommodation needs.</span></figcaption>
+            </figure>
+          </div>
+          <div class="section-head">
+            <h2>Five villa type entrances</h2>
+            <p>Each villa type shows one effect rendering and one floor plan reference for quick customer selection.</p>
+          </div>
+          <div class="villa-type-grid" aria-label="Five villa types with effect renderings and floor plans">
+            <article class="villa-type-card" id="villa-50">
+              <div class="villa-type-media">
+                <img src="assets/pdf-image-70.jpg" alt="50 sqm modular villa effect rendering" />
+                <img src="assets/pdf-image-73.jpg" alt="50 sqm villa floor plan marked as 53 sqm internal area" />
+              </div>
+              <div class="villa-type-body">
+                <span class="type-size">50 sqm</span>
+                <h3>Compact Villa</h3>
+                <p>PDF reference: floor plan marked as internal area 53 sqm, suitable for compact resort or private villa use.</p>
+              </div>
+            </article>
+            <article class="villa-type-card" id="villa-78">
+              <div class="villa-type-media">
+                <img src="assets/pdf-image-75.jpg" alt="78 sqm modular villa effect rendering" />
+                <img src="assets/pdf-image-76.jpg" alt="78 sqm villa floor plan marked as 78 sqm internal area" />
+              </div>
+              <div class="villa-type-body">
+                <span class="type-size">78 sqm</span>
+                <h3>Standard Villa</h3>
+                <p>PDF reference: floor plan marked as internal area 78 sqm, with living, dining, two bedrooms, bathrooms, and parking.</p>
+              </div>
+            </article>
+            <article class="villa-type-card" id="villa-100">
+              <div class="villa-type-media">
+                <img src="assets/pdf-image-77.jpg" alt="100 sqm modular villa effect rendering" />
+                <img src="assets/pdf-image-78.jpg" alt="100 sqm villa floor plan marked as 98 sqm internal area" />
+              </div>
+              <div class="villa-type-body">
+                <span class="type-size">100 sqm</span>
+                <h3>Family Villa</h3>
+                <p>PDF reference: floor plan marked as internal area 98 sqm, with larger room count for family and rental use.</p>
+              </div>
+            </article>
+            <article class="villa-type-card" id="villa-150">
+              <div class="villa-type-media">
+                <img src="assets/pdf-image-79.jpg" alt="150 sqm modular villa effect rendering" />
+                <div class="villa-plan-pair">
+                  <img src="assets/pdf-image-80.jpg" alt="150 sqm villa first floor plan marked as 90 sqm internal area" />
+                  <img src="assets/pdf-image-81.jpg" alt="150 sqm villa second floor plan marked as 60 sqm internal area" />
+                </div>
+              </div>
+              <div class="villa-type-body">
+                <span class="type-size">150 sqm</span>
+                <h3>Premium Villa</h3>
+                <p>PDF reference: two floor plans, first floor internal area 90 sqm and second floor internal area 60 sqm.</p>
+              </div>
+            </article>
+            <article class="villa-type-card" id="villa-200">
+              <div class="villa-type-media">
+                <img src="assets/pdf-image-82.jpg" alt="200 sqm modular villa effect rendering" />
+                <div class="villa-plan-pair">
+                  <img src="assets/pdf-image-83.jpg" alt="200 sqm villa first floor plan marked as 120 sqm internal area" />
+                  <img src="assets/pdf-image-84.jpg" alt="200 sqm villa second floor plan marked as 93 sqm internal area" />
+                </div>
+              </div>
+              <div class="villa-type-body">
+                <span class="type-size">200 sqm</span>
+                <h3>Luxury Villa</h3>
+                <p>PDF reference: two floor plans, first floor internal area 120 sqm and second floor internal area 93 sqm.</p>
+              </div>
+            </article>
+          </div>
+          <div class="villa-entry">
+            <h3>Villa Type Entrance: effects, layouts, and 50-200 sqm options</h3>
+            <p>
+              Enter the villa type guide to review 50 sqm, 78 sqm, 100 sqm, 150 sqm, and 200 sqm villa references.
+              This section is built for customers who want to choose a house type before requesting quotation.
+            </p>
+            <div class="entry-actions">
+              <a class="btn btn-primary" href="#villa-50">50 sqm</a>
+              <a class="btn btn-primary" href="#villa-78">78 sqm</a>
+              <a class="btn btn-primary" href="#villa-100">100 sqm</a>
+              <a class="btn btn-primary" href="#villa-150">150 sqm</a>
+              <a class="btn btn-primary" href="#villa-200">200 sqm</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hospitality detail-section" id="hotel-interiors">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Hotel interior entrance</h2>
+            <p>Four public-area interior references for hotel lobby, lounge, reception, and guest circulation presentation.</p>
+          </div>
+          <div class="hospitality-gallery" aria-label="Hotel interior renderings">
+            <figure class="hospitality-shot">
+              <img src="assets/hotel-interior-01.jpg" alt="Hotel interior public area rendering 1" />
+              <figcaption>Hotel Public Area 01</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/hotel-interior-02.jpg" alt="Hotel interior public area rendering 2" />
+              <figcaption>Hotel Public Area 02</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/hotel-interior-03.jpg" alt="Hotel interior public area rendering 3" />
+              <figcaption>Hotel Public Area 03</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/hotel-interior-04.jpg" alt="Hotel interior public area rendering 4" />
+              <figcaption>Hotel Public Area 04</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="hospitality detail-section" id="apartment-interiors">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Apartment interior entrance</h2>
+            <p>Four interior references for apartment rooms, living areas, and furnished rental presentation.</p>
+          </div>
+          <div class="hospitality-gallery" aria-label="Apartment interior renderings">
+            <figure class="hospitality-shot">
+              <img src="assets/apartment-interior-01.jpg" alt="Apartment interior rendering 1" />
+              <figcaption>Apartment Interior 01</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/apartment-interior-02.jpg" alt="Apartment interior rendering 2" />
+              <figcaption>Apartment Interior 02</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/apartment-interior-03.jpg" alt="Apartment interior rendering 3" />
+              <figcaption>Apartment Interior 03</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/apartment-interior-04.jpg" alt="Apartment interior rendering 4" />
+              <figcaption>Apartment Interior 04</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -864,8 +1626,19 @@
                 <div><strong>WhatsApp</strong><span>+66 92 529 4488</span></div>
               </div>
               <div class="contact-row">
+                <span class="contact-icon">L</span>
+                <div><strong>LINE</strong><span>Scan the QR code below to connect with Thai Villa Group.</span></div>
+              </div>
+              <div class="contact-row">
                 <span class="contact-icon">TH</span>
                 <div><strong>Market</strong><span>Thailand villas, resorts, apartments, hotels, and project offices</span></div>
+              </div>
+            </div>
+            <div class="line-qr-card">
+              <img src="assets/line-qr.png" alt="Thai Villa Group LINE QR code" />
+              <div>
+                <strong>Scan LINE QR Code</strong>
+                <span>Add us on LINE for project drawings, quotation discussion, and fast follow-up in Thailand.</span>
               </div>
             </div>
           </div>
@@ -883,10 +1656,19 @@
 
     <footer class="footer">
       <div class="shell">
-        <span>© 2026 Thai Villa Group. All rights reserved.</span>
+        <span>&copy; 2026 Thai Villa Group. All rights reserved.</span>
         <span>Modular villas, apartments, hotels, and offices for Thailand.</span>
       </div>
     </footer>
+
+    <a
+      class="line-float"
+      href="#contact"
+      aria-label="View LINE QR code"
+      title="View LINE QR code"
+    >
+      LINE
+    </a>
 
     <a
       class="whatsapp"
@@ -898,5 +1680,209 @@
     >
       W
     </a>
+    <script>
+      const detailIds = ["villa-types", "hotel-interiors", "apartment-interiors"];
+      const translations = {
+        "Modular Building Solutions": ["装配式建筑解决方案", "โซลูชันอาคารโมดูลาร์"],
+        "Products": ["产品", "สินค้า"],
+        "Projects": ["项目", "โครงการ"],
+        "Villa Types": ["别墅户型", "แบบวิลล่า"],
+        "Hotel": ["酒店", "โรงแรม"],
+        "Apartment": ["公寓", "อพาร์ตเมนต์"],
+        "Factory": ["工厂", "โรงงาน"],
+        "Process": ["流程", "ขั้นตอน"],
+        "Contact": ["联系", "ติดต่อ"],
+        "Get a Quote": ["获取报价", "ขอใบเสนอราคา"],
+        "Thailand modular villa specialist": ["泰国装配式别墅专家", "ผู้เชี่ยวชาญวิลล่าโมดูลาร์ในไทย"],
+        "Premium modular villa solutions for Thailand developers, resorts, and private land owners. Choose a 50-200 sqm villa type, review floor plans, and request a clear quotation for your project.": ["为泰国开发商、度假村和私人土地业主提供高端装配式别墅方案。选择50-200平方米户型，查看平面图，并获取清晰报价。", "โซลูชันวิลล่าโมดูลาร์ระดับพรีเมียมสำหรับผู้พัฒนาโครงการ รีสอร์ต และเจ้าของที่ดินในไทย เลือกแบบ 50-200 ตร.ม. ดูแปลน และขอใบเสนอราคาที่ชัดเจน"],
+        "View Villa Types": ["查看别墅户型", "ดูแบบวิลล่า"],
+        "Request Quotation": ["申请报价", "ขอใบเสนอราคา"],
+        "For resorts, rental villas, staff housing, family homes, and project offices in Thailand": ["适用于泰国度假村、出租别墅、员工住房、家庭住宅和项目办公室", "เหมาะสำหรับรีสอร์ต วิลล่าให้เช่า ที่พักพนักงาน บ้านพัก และสำนักงานโครงการในไทย"],
+        "sqm villa type guide for project planning": ["平方米别墅户型指南，用于项目规划", "ตร.ม. คู่มือแบบวิลล่าสำหรับวางแผนโครงการ"],
+        "Villa, apartment, hotel, and office systems": ["别墅、公寓、酒店和办公室系统", "ระบบวิลล่า อพาร์ตเมนต์ โรงแรม และสำนักงาน"],
+        "Designed for Thailand climate and resort use": ["面向泰国气候和度假项目使用设计", "ออกแบบสำหรับภูมิอากาศไทยและการใช้งานรีสอร์ต"],
+        "Clear Area Options": ["清晰面积选择", "ตัวเลือกพื้นที่ชัดเจน"],
+        "Use 50-200 sqm types to match land size, room count, and budget range.": ["用50-200平方米户型匹配土地面积、房间数量和预算范围。", "ใช้แบบ 50-200 ตร.ม. ให้เหมาะกับขนาดที่ดิน จำนวนห้อง และงบประมาณ"],
+        "Fast Project Start": ["快速启动项目", "เริ่มโครงการได้เร็ว"],
+        "Begin from a reference layout, then adjust facade, terrace, rooms, and finish level.": ["先从参考户型开始，再调整立面、露台、房间和装修等级。", "เริ่มจากผังอ้างอิง แล้วปรับฟาซาด ระเบียง ห้อง และระดับวัสดุตกแต่ง"],
+        "Thailand Ready": ["适配泰国", "พร้อมสำหรับไทย"],
+        "Planning for heat, rain, rental use, resort operations, and local installation needs.": ["考虑高温、雨季、出租使用、度假村运营和本地安装需求。", "วางแผนสำหรับอากาศร้อน ฝน การปล่อยเช่า การใช้งานรีสอร์ต และการติดตั้งในพื้นที่"],
+        "Quotation Support": ["报价支持", "สนับสนุนใบเสนอราคา"],
+        "Send land size and target style; receive a proposal direction and material scope.": ["发送土地面积和目标风格，获取方案方向和材料范围。", "ส่งขนาดที่ดินและสไตล์ที่ต้องการ เพื่อรับแนวทาง方案และขอบเขตวัสดุ"],
+        "Product systems for modern property development": ["面向现代地产开发的产品系统", "ระบบผลิตภัณฑ์สำหรับพัฒนาอสังหาริมทรัพย์ยุคใหม่"],
+        "A modular building portfolio covering private residences, income properties, hospitality expansion, and professional commercial space.": ["覆盖私人住宅、收益型物业、酒店扩建和商业办公空间的装配式建筑产品组合。", "กลุ่มอาคารโมดูลาร์สำหรับบ้านพักส่วนตัว อสังหาฯ เพื่อรายได้ งานโรงแรม และพื้นที่เชิงพาณิชย์"],
+        "Modular Villas": ["装配式别墅", "วิลล่าโมดูลาร์"],
+        "Premium villa units for resorts, private estates, beachfront land, and rental investment projects.": ["适用于度假村、私人庄园、海滨土地和出租投资项目的高端别墅单元。", "ยูนิตวิลล่าระดับพรีเมียมสำหรับรีสอร์ต ที่ดินส่วนตัว ที่ดินริมทะเล และโครงการลงทุนให้เช่า"],
+        "Area": ["面积", "พื้นที่"],
+        "Best for": ["适合", "เหมาะสำหรับ"],
+        "Pool villas, resorts, private homes": ["泳池别墅、度假村、私人住宅", "พูลวิลล่า รีสอร์ต บ้านพักส่วนตัว"],
+        "Resort": ["度假村", "รีสอร์ต"],
+        "Luxury": ["高端", "ลักชัวรี"],
+        "Apartments": ["公寓", "อพาร์ตเมนต์"],
+        "Efficient modular apartments for staff housing, rental buildings, student housing, and mixed-use sites.": ["高效装配式公寓，适用于员工住房、出租楼、学生宿舍和混合用途项目。", "อพาร์ตเมนต์โมดูลาร์สำหรับที่พักพนักงาน อาคารให้เช่า หอพักนักศึกษา และโครงการผสมผสาน"],
+        "Layout": ["布局", "ผัง"],
+        "Studio to multi-room blocks": ["单间到多房模块", "สตูดิโอถึงหลายห้อง"],
+        "Rental income and staff housing": ["出租收益和员工住房", "รายได้ค่าเช่าและที่พักพนักงาน"],
+        "Rental": ["出租", "ให้เช่า"],
+        "Urban": ["城市", "เมือง"],
+        "Hotels": ["酒店", "โรงแรม"],
+        "Expandable hotel rooms and resort suites built for fast project rollout and consistent guest experience.": ["可扩展酒店客房和度假套房，帮助项目快速落地并保持稳定入住体验。", "ห้องโรงแรมและห้องสวีตรีสอร์ตที่ขยายได้ เพื่อเริ่มโครงการรวดเร็วและประสบการณ์ผู้เข้าพักที่สม่ำเสมอ"],
+        "Module": ["模块", "โมดูล"],
+        "Guest room, suite, service block": ["客房、套房、服务模块", "ห้องพัก ห้องสวีท บล็อกบริการ"],
+        "Boutique hotel expansion": ["精品酒店扩建", "ขยายโรงแรมบูติก"],
+        "Boutique Hotel": ["精品酒店", "โรงแรมบูติก"],
+        "Resort Suite": ["度假套房", "ห้องสวีตรีสอร์ต"],
+        "Offices": ["办公室", "สำนักงาน"],
+        "Clean, durable office modules for site offices, sales galleries, workspaces, and project operations.": ["洁净耐用的办公室模块，适用于现场办公室、销售展厅、工作空间和项目运营。", "โมดูลสำนักงานที่สะอาดและทนทาน สำหรับสำนักงานไซต์งาน แกลเลอรีขาย พื้นที่ทำงาน และการดำเนินโครงการ"],
+        "Use": ["用途", "การใช้งาน"],
+        "Sales office, site office, workspace": ["销售办公室、现场办公室、工作空间", "สำนักงานขาย สำนักงานไซต์งาน พื้นที่ทำงาน"],
+        "Project launch and temporary teams": ["项目启动和临时团队", "เริ่มโครงการและทีมชั่วคราว"],
+        "Site Office": ["现场办公室", "สำนักงานไซต์งาน"],
+        "Workspace": ["工作空间", "พื้นที่ทำงาน"],
+        "Sales Office": ["销售办公室", "สำนักงานขาย"],
+        "Open Villa Type Guide": ["进入别墅户型", "เปิดคู่มือแบบวิลล่า"],
+        "Open Apartment Interiors": ["查看公寓内装", "ดูภายในอพาร์ตเมนต์"],
+        "Open Hotel Interiors": ["查看酒店内装", "ดูภายในโรงแรม"],
+        "Villa type introduction: effects, layouts, and floor plans": ["别墅户型介绍：效果图、布局和平面图", "แนะนำแบบวิลล่า: ภาพ效果 ผัง และแปลน"],
+        "PDF renderings and floor plan references are gathered here so customers can choose a villa type before quotation.": ["这里集中展示PDF里的效果图和平面图，方便客户在报价前选择户型。", "รวมภาพเรนเดอร์และแปลนอ้างอิงจาก PDF เพื่อให้ลูกค้าเลือกแบบก่อนขอราคา"],
+        "Start from a proven villa type, then customize for your land.": ["先选择成熟户型，再根据土地定制。", "เริ่มจากแบบวิลล่าที่พร้อมใช้ แล้วปรับให้เหมาะกับที่ดินของคุณ"],
+        "First review exterior renderings and interior references from the PDF, then choose a 50-200 sqm size range and send the floor plan reference for quotation.": ["先查看PDF中的外观和室内参考，再选择50-200平方米户型，并发送平面图用于报价。", "ดูภาพภายนอกและภายในจาก PDF ก่อน จากนั้นเลือกขนาด 50-200 ตร.ม. และส่งแปลนอ้างอิงเพื่อขอราคา"],
+        "Private Land": ["私人土地", "ที่ดินส่วนตัว"],
+        "Resort Rental": ["度假村出租项目", "รีสอร์ตให้เช่า"],
+        "Pool Villa": ["泳池别墅", "พูลวิลล่า"],
+        "Staff Housing": ["员工住房", "ที่พักพนักงาน"],
+        "For customers who already own land and want to place a modular villa on site.": ["适合已有土地、希望落地装配式别墅的客户。", "สำหรับลูกค้าที่มีที่ดินแล้วและต้องการติดตั้งวิลล่าโมดูลาร์ในพื้นที่"],
+        "For resort operators and investors planning villas for short-stay rental income.": ["适合度假村业主和短租收益型别墅投资人。", "สำหรับผู้ประกอบการรีสอร์ตและนักลงทุนวิลล่าให้เช่าระยะสั้น"],
+        "For higher-end private or rental villas with outdoor leisure and pool deck planning.": ["适合带户外休闲区和泳池平台的高端自住或出租别墅。", "สำหรับวิลล่าระดับสูงพร้อมพื้นที่พักผ่อนกลางแจ้งและสระว่ายน้ำ"],
+        "For project teams, factory staff, resort employees, and temporary accommodation needs.": ["适合项目团队、工厂员工、度假村员工和临时住宿需求。", "สำหรับทีมโครงการ พนักงานโรงงาน พนักงานรีสอร์ต และที่พักชั่วคราว"],
+        "Five villa type entrances": ["五个别墅户型入口", "ทางเข้าแบบวิลล่า 5 แบบ"],
+        "Each villa type shows one effect rendering and one floor plan reference for quick customer selection.": ["每个户型展示效果图和平面图，方便客户快速选择。", "แต่ละแบบมีภาพ效果และแปลน เพื่อให้ลูกค้าเลือกได้รวดเร็ว"],
+        "Compact Villa": ["紧凑型别墅", "วิลล่าขนาดกะทัดรัด"],
+        "Standard Villa": ["标准型别墅", "วิลล่ามาตรฐาน"],
+        "Family Villa": ["家庭型别墅", "วิลล่าครอบครัว"],
+        "Premium Villa": ["高端型别墅", "วิลล่าพรีเมียม"],
+        "Luxury Villa": ["豪华型别墅", "วิลล่าลักชัวรี"],
+        "PDF reference: floor plan marked as internal area 53 sqm, suitable for compact resort or private villa use.": ["PDF标注：套内面积53平方米，适合紧凑型度假别墅或私人别墅使用。", "อ้างอิง PDF: พื้นที่ภายใน 53 ตร.ม. เหมาะสำหรับวิลล่ารีสอร์ตขนาดกะทัดรัดหรือวิลล่าส่วนตัว"],
+        "PDF reference: floor plan marked as internal area 78 sqm, with living, dining, two bedrooms, bathrooms, and parking.": ["PDF标注：套内面积78平方米，包含客厅、餐厅、两间卧室、卫生间和停车位。", "อ้างอิง PDF: พื้นที่ภายใน 78 ตร.ม. พร้อมห้องนั่งเล่น ห้องอาหาร 2 ห้องนอน ห้องน้ำ และที่จอดรถ"],
+        "PDF reference: floor plan marked as internal area 98 sqm, with larger room count for family and rental use.": ["PDF标注：套内面积98平方米，房间数量更充足，适合家庭居住和出租使用。", "อ้างอิง PDF: พื้นที่ภายใน 98 ตร.ม. จำนวนห้องมากขึ้น เหมาะสำหรับครอบครัวและการให้เช่า"],
+        "PDF reference: two floor plans, first floor internal area 90 sqm and second floor internal area 60 sqm.": ["PDF标注：两张平面图，一层套内面积90平方米，二层套内面积60平方米。", "อ้างอิง PDF: แปลน 2 ชั้น ชั้นหนึ่งพื้นที่ภายใน 90 ตร.ม. ชั้นสอง 60 ตร.ม."],
+        "PDF reference: two floor plans, first floor internal area 120 sqm and second floor internal area 93 sqm.": ["PDF标注：两张平面图，一层套内面积120平方米，二层套内面积93平方米。", "อ้างอิง PDF: แปลน 2 ชั้น ชั้นหนึ่งพื้นที่ภายใน 120 ตร.ม. ชั้นสอง 93 ตร.ม."],
+        "Villa Type Entrance: effects, layouts, and 50-200 sqm options": ["别墅户型入口：效果图、布局和50-200平方米选择", "ทางเข้าแบบวิลล่า: ภาพ效果 ผัง และตัวเลือก 50-200 ตร.ม."],
+        "Enter the villa type guide to review 50 sqm, 78 sqm, 100 sqm, 150 sqm, and 200 sqm villa references. This section is built for customers who want to choose a house type before requesting quotation.": ["进入别墅户型指南，可查看50平、78平、100平、150平和200平别墅参考。这个区域适合客户在询价前先选择房型。", "เข้าสู่คู่มือแบบวิลล่าเพื่อดูแบบ 50, 78, 100, 150 และ 200 ตร.ม. ส่วนนี้สำหรับลูกค้าที่ต้องการเลือกแบบบ้านก่อนขอราคา"],
+        "Hotel interior entrance": ["酒店内装入口", "ทางเข้าภายในโรงแรม"],
+        "Four public-area interior references for hotel lobby, lounge, reception, and guest circulation presentation.": ["展示4张酒店公区内装参考，包括大堂、休息区、接待区和客流空间。", "ภาพอ้างอิงพื้นที่ส่วนกลาง 4 ภาพ สำหรับล็อบบี้ เลานจ์ เคาน์เตอร์ต้อนรับ และทางเดินผู้เข้าพัก"],
+        "Hotel Public Area 01": ["酒店公区 01", "พื้นที่ส่วนกลางโรงแรม 01"],
+        "Hotel Public Area 02": ["酒店公区 02", "พื้นที่ส่วนกลางโรงแรม 02"],
+        "Hotel Public Area 03": ["酒店公区 03", "พื้นที่ส่วนกลางโรงแรม 03"],
+        "Hotel Public Area 04": ["酒店公区 04", "พื้นที่ส่วนกลางโรงแรม 04"],
+        "Apartment interior entrance": ["公寓内装入口", "ทางเข้าภายในอพาร์ตเมนต์"],
+        "Four interior references for apartment rooms, living areas, and furnished rental presentation.": ["展示4张公寓内装参考，适用于房间、起居空间和精装出租展示。", "ภาพอ้างอิงภายใน 4 ภาพ สำหรับห้องพัก พื้นที่นั่งเล่น และอพาร์ตเมนต์พร้อมเฟอร์นิเจอร์"],
+        "Apartment Interior 01": ["公寓内装 01", "ภายในอพาร์ตเมนต์ 01"],
+        "Apartment Interior 02": ["公寓内装 02", "ภายในอพาร์ตเมนต์ 02"],
+        "Apartment Interior 03": ["公寓内装 03", "ภายในอพาร์ตเมนต์ 03"],
+        "Apartment Interior 04": ["公寓内装 04", "ภายในอพาร์ตเมนต์ 04"],
+        "Project showcase": ["项目展示", "ตัวอย่างโครงการ"],
+        "Reference layouts for villa communities, hospitality projects, and commercial modular developments.": ["展示别墅社区、酒店项目和商业装配式开发的参考布局。", "ผังอ้างอิงสำหรับชุมชนวิลล่า โครงการโรงแรม และอาคารโมดูลาร์เชิงพาณิชย์"],
+        "Resort Villa Community": ["度假别墅社区", "ชุมชนรีสอร์ตวิลล่า"],
+        "Detached modular villas arranged around landscaped outdoor living, pool decks, and guest pathways.": ["独立装配式别墅围绕景观户外生活区、泳池平台和客人动线布置。", "วิลล่าโมดูลาร์แบบแยกหลัง จัดวางรอบพื้นที่พักผ่อนกลางแจ้ง สระว่ายน้ำ และทางเดินผู้เข้าพัก"],
+        "50-200 sqm villas": ["50-200平方米别墅", "วิลล่า 50-200 ตร.ม."],
+        "Pool deck option": ["可选泳池平台", "ตัวเลือกพื้นสระว่ายน้ำ"],
+        "Rental operation ready": ["适合出租运营", "พร้อมสำหรับการให้เช่า"],
+        "Apartment Cluster": ["公寓组团", "กลุ่มอพาร์ตเมนต์"],
+        "Compact modular residential blocks for rental income and staff accommodation.": ["紧凑型装配式住宅模块，适用于出租收益和员工住宿。", "บล็อกที่พักโมดูลาร์ขนาดกะทัดรัด สำหรับรายได้ค่าเช่าและที่พักพนักงาน"],
+        "Repeatable blocks": ["可复制模块", "บล็อกที่ทำซ้ำได้"],
+        "Fast rollout": ["快速落地", "ดำเนินการได้เร็ว"],
+        "Boutique Hotel Suite": ["精品酒店套房", "ห้องสวีทโรงแรมบูติก"],
+        "Repeatable room modules designed to shorten hospitality project delivery timelines.": ["可复制客房模块，用于缩短酒店类项目交付周期。", "โมดูลห้องพักที่ทำซ้ำได้ ออกแบบเพื่อลดระยะเวลาส่งมอบโครงการโรงแรม"],
+        "Guest rooms": ["客房", "ห้องพัก"],
+        "Suite modules": ["套房模块", "โมดูลห้องสวีท"],
+        "Factory strength behind every project": ["每个项目背后的工厂实力", "ศักยภาพโรงงานเบื้องหลังทุกโครงการ"],
+        "Controlled production, repeatable quality checks, and coordinated logistics help reduce on-site uncertainty.": ["受控生产、可重复质检和协同物流，有助于减少现场不确定性。", "การผลิตที่ควบคุมได้ การตรวจคุณภาพซ้ำได้ และโลจิสติกส์ที่ประสานกัน ช่วยลดความไม่แน่นอนหน้างาน"],
+        "Modular Production": ["模块化生产", "การผลิตโมดูลาร์"],
+        "Factory-built structural, enclosure, interior, and MEP components for repeatable project quality.": ["工厂生产结构、围护、内装和机电组件，保证项目质量稳定可复制。", "ผลิตชิ้นส่วนโครงสร้าง เปลือกอาคาร ภายใน และระบบ MEP ในโรงงาน เพื่อคุณภาพที่ทำซ้ำได้"],
+        "Quality Control": ["质量控制", "ควบคุมคุณภาพ"],
+        "Inspection checkpoints for materials, fabrication accuracy, waterproofing details, and final finish.": ["对材料、加工精度、防水细节和最终饰面设置检查节点。", "ตรวจวัสดุ ความแม่นยำการผลิต รายละเอียดกันน้ำ และงานตกแต่งขั้นสุดท้าย"],
+        "Design Coordination": ["设计协调", "ประสานงานออกแบบ"],
+        "Project drawings, module layout, engineering coordination, and Thai climate adaptation support.": ["提供项目图纸、模块布局、工程协调和泰国气候适配支持。", "สนับสนุนแบบโครงการ ผังโมดูล การประสานงานวิศวกรรม และการปรับให้เหมาะกับภูมิอากาศไทย"],
+        "Delivery Planning": ["交付计划", "แผนการส่งมอบ"],
+        "Container loading, site access planning, installation sequence, and project handover coordination.": ["协调装柜、现场通道、安装顺序和项目移交。", "ประสานการบรรจุตู้คอนเทนเนอร์ ทางเข้าไซต์ ลำดับติดตั้ง และการส่งมอบโครงการ"],
+        "Service process": ["服务流程", "ขั้นตอนบริการ"],
+        "A clear workflow from first concept to delivery, keeping budget, schedule, and specifications visible.": ["从概念到交付的清晰流程，让预算、周期和规格保持透明。", "ขั้นตอนชัดเจนตั้งแต่แนวคิดแรกถึงส่งมอบ ทำให้งบประมาณ กำหนดเวลา และสเปกเห็นได้ชัด"],
+        "Requirement Brief": ["需求沟通", "สรุปความต้องการ"],
+        "Confirm land use, target building type, room count, area, finish level, and project schedule.": ["确认土地用途、目标建筑类型、房间数量、面积、装修等级和项目周期。", "ยืนยันการใช้ที่ดิน ประเภทอาคาร จำนวนห้อง พื้นที่ ระดับวัสดุ และกำหนดโครงการ"],
+        "Concept Plan": ["概念方案", "แผนแนวคิด"],
+        "Prepare modular layout options, visual direction, estimated budget, and product recommendation.": ["准备模块布局选项、视觉方向、预算估算和产品建议。", "เตรียมตัวเลือกผังโมดูลาร์ แนวทางภาพ งบประมาณโดยประมาณ และคำแนะนำผลิตภัณฑ์"],
+        "Quotation": ["报价", "ใบเสนอราคา"],
+        "Issue a clear scope, unit pricing, payment schedule, production timeline, and delivery plan.": ["提供清晰范围、单价、付款节点、生产周期和交付计划。", "ออกขอบเขตงานชัดเจน ราคาต่อหน่วย เงื่อนไขชำระเงิน ระยะเวลาผลิต และแผนส่งมอบ"],
+        "Production": ["生产", "การผลิต"],
+        "Manufacture modules and components under controlled factory conditions with quality inspection.": ["在受控工厂环境中生产模块和组件，并进行质量检验。", "ผลิตโมดูลและชิ้นส่วนในสภาพโรงงานที่ควบคุมได้ พร้อมตรวจคุณภาพ"],
+        "Delivery & Support": ["交付与支持", "ส่งมอบและสนับสนุน"],
+        "Coordinate shipping, installation guidance, documentation, and after-sales technical support.": ["协调运输、安装指导、资料文件和售后技术支持。", "ประสานการขนส่ง คำแนะนำติดตั้ง เอกสาร และการสนับสนุนเทคนิคหลังการขาย"],
+        "Contact Thai Villa Group": ["联系 Thai Villa Group", "ติดต่อ Thai Villa Group"],
+        "Send your land size, target product, preferred style, and budget range. We will prepare a suitable proposal.": ["发送土地面积、目标产品、偏好风格和预算范围，我们会准备合适方案。", "ส่งขนาดที่ดิน ประเภทอาคาร สไตล์ที่ชอบ และงบประมาณ เราจะเตรียมข้อเสนอที่เหมาะสม"],
+        "Email": ["邮箱", "อีเมล"],
+        "WhatsApp": ["WhatsApp", "WhatsApp"],
+        "LINE": ["LINE", "LINE"],
+        "Scan the QR code below to connect with Thai Villa Group.": ["扫描下方二维码添加 Thai Villa Group。", "สแกน QR Code ด้านล่างเพื่อติดต่อ Thai Villa Group"],
+        "Market": ["市场", "ตลาด"],
+        "Thailand villas, resorts, apartments, hotels, and project offices": ["泰国别墅、度假村、公寓、酒店和项目办公室", "วิลล่า รีสอร์ต อพาร์ตเมนต์ โรงแรม และสำนักงานโครงการในไทย"],
+        "Scan LINE QR Code": ["扫描 LINE 二维码", "สแกน LINE QR Code"],
+        "Add us on LINE for project drawings, quotation discussion, and fast follow-up in Thailand.": ["添加 LINE，沟通项目图纸、报价和泰国本地快速跟进。", "เพิ่มเราใน LINE เพื่อคุยแบบโครงการ ใบเสนอราคา และติดตามงานในไทยอย่างรวดเร็ว"],
+        "Ready to build a villa project faster?": ["准备更快启动别墅项目？", "พร้อมเริ่มโครงการวิลล่าให้เร็วขึ้นหรือยัง"],
+        "Share your project location, required units, drawings if available, and target delivery date. Our team will respond with the best-fit modular solution.": ["发送项目位置、所需套数、已有图纸和目标交付时间，我们会回复最匹配的装配式方案。", "ส่งตำแหน่งโครงการ จำนวนยูนิต แบบที่มี และกำหนดส่งมอบ ทีมงานจะตอบกลับด้วยโซลูชันโมดูลาร์ที่เหมาะที่สุด"],
+        "Request Proposal": ["申请方案", "ขอข้อเสนอ"],
+        "© 2026 Thai Villa Group. All rights reserved.": ["© 2026 Thai Villa Group. 保留所有权利。", "© 2026 Thai Villa Group. สงวนลิขสิทธิ์"],
+        "Modular villas, apartments, hotels, and offices for Thailand.": ["面向泰国的装配式别墅、公寓、酒店和办公室。", "วิลล่า อพาร์ตเมนต์ โรงแรม และสำนักงานโมดูลาร์สำหรับประเทศไทย"]
+      };
+
+      function cleanText(value) {
+        return value.replace(/\s+/g, " ").trim();
+      }
+
+      function setLanguage(lang) {
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : lang === "th" ? "th" : "en";
+        document.querySelectorAll("[data-lang]").forEach((button) => {
+          button.classList.toggle("is-active", button.dataset.lang === lang);
+        });
+        document.querySelectorAll("body *").forEach((element) => {
+          if (["SCRIPT", "STYLE", "IMG"].includes(element.tagName) || element.children.length) return;
+          if (!element.dataset.i18nKey) {
+            const key = cleanText(element.textContent);
+            if (translations[key]) element.dataset.i18nKey = key;
+          }
+          const key = element.dataset.i18nKey;
+          if (!key) return;
+          element.textContent = lang === "en" ? key : translations[key][lang === "zh" ? 0 : 1] || key;
+        });
+        localStorage.setItem("tvgLang", lang);
+      }
+
+      function openDetail(hash) {
+        const id = hash.replace("#", "");
+        if (!detailIds.includes(id)) return;
+        detailIds.forEach((detailId) => {
+          const section = document.getElementById(detailId);
+          if (section) section.classList.toggle("is-open", detailId === id);
+        });
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      document.querySelectorAll(".lang-switch button").forEach((button) => {
+        button.addEventListener("click", () => setLanguage(button.dataset.lang));
+      });
+      document.querySelectorAll('a[href="#villa-types"], a[href="#hotel-interiors"], a[href="#apartment-interiors"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const hash = link.getAttribute("href");
+          history.pushState(null, "", hash);
+          openDetail(hash);
+        });
+      });
+      window.addEventListener("DOMContentLoaded", () => {
+        setLanguage(localStorage.getItem("tvgLang") || "en");
+        if (detailIds.includes(location.hash.replace("#", ""))) openDetail(location.hash);
+      });
+    </script>
   </body>
 </html>
+
