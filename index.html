@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Thai Villa Group supplies modular villas, apartments, hotels, and offices for developers, resorts, and private owners in Thailand."
+      content="Thai Villa Group supplies industrialized modular building systems for Thailand developers, resorts, factories, hotels, apartments, and project owners."
     />
     <link rel="canonical" href="https://www.thaivillagroup.com/" />
-    <meta property="og:title" content="Thai Villa Group | Modular Villas, Apartments, Hotels & Offices" />
+    <meta property="og:title" content="Thai Villa Group | Thailand Modular Construction Systems" />
     <meta
       property="og:description"
-      content="Premium modular villa, apartment, hotel, and office solutions for Thailand developers, resorts, and private land owners."
+      content="Industrialized modular building systems, factory production, supply chain coordination, and project delivery support for Thailand."
     />
     <meta property="og:url" content="https://www.thaivillagroup.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.thaivillagroup.com/assets/hero-villa.jpg" />
-    <title>Thai Villa Group | Modular Villas, Apartments, Hotels & Offices</title>
+    <title>Thai Villa Group | Thailand Modular Construction Systems</title>
     <style>
       :root {
         --navy: #071b3a;
@@ -67,8 +67,8 @@
         position: sticky;
         top: 0;
         z-index: 20;
-        background: rgba(255, 255, 255, 0.92);
-        border-bottom: 1px solid rgba(217, 228, 242, 0.9);
+        background: rgba(12, 13, 14, 0.74);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         backdrop-filter: blur(18px);
       }
 
@@ -77,44 +77,59 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
+        gap: 18px;
       }
 
       .brand {
         display: flex;
         align-items: center;
         gap: 12px;
+        flex: 0 0 240px;
+        max-width: 240px;
         font-weight: 800;
-        color: var(--navy);
+        color: var(--white);
+      }
+
+      .brand > span {
+        display: block;
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.02;
+        font-size: 18px;
       }
 
       .brand-mark {
-        width: 42px;
-        height: 42px;
-        display: grid;
-        place-items: center;
-        border-radius: 8px;
-        background: linear-gradient(135deg, var(--navy), var(--royal));
-        color: var(--white);
-        font-size: 18px;
-        box-shadow: 0 12px 28px rgba(11, 79, 159, 0.25);
+        width: 126px;
+        height: 44px;
+        display: block;
+        object-fit: contain;
+        border-radius: 4px;
+        background: transparent;
       }
 
       .brand small {
         display: block;
         margin-top: 2px;
-        color: var(--muted);
-        font-size: 12px;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: 10px;
         font-weight: 600;
+        line-height: 1.15;
       }
 
       .menu {
         display: flex;
         align-items: center;
-        gap: 18px;
-        color: #334761;
-        font-size: 14px;
+        justify-content: center;
+        flex: 1 1 auto;
+        min-width: 0;
+        gap: clamp(8px, 0.9vw, 14px);
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 12px;
         font-weight: 700;
+      }
+
+      .menu a {
+        white-space: nowrap;
       }
 
       .nav-actions {
@@ -126,9 +141,9 @@
       .lang-switch {
         display: inline-flex;
         padding: 4px;
-        border: 1px solid var(--line);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.84);
+        background: rgba(255, 255, 255, 0.08);
       }
 
       .lang-switch button {
@@ -136,7 +151,7 @@
         height: 32px;
         border: 0;
         border-radius: 6px;
-        color: #334761;
+        color: rgba(255, 255, 255, 0.78);
         background: transparent;
         font: inherit;
         font-size: 12px;
@@ -145,8 +160,8 @@
       }
 
       .lang-switch button.is-active {
-        color: var(--white);
-        background: var(--blue);
+        color: #111111;
+        background: #f2e9db;
       }
 
       .nav-cta,
@@ -163,9 +178,9 @@
 
       .nav-cta,
       .btn-primary {
-        color: var(--white);
-        background: linear-gradient(135deg, var(--blue), var(--royal));
-        box-shadow: 0 14px 30px rgba(11, 79, 159, 0.25);
+        color: #111111;
+        background: #f2e9db;
+        box-shadow: 0 14px 30px rgba(242, 233, 219, 0.18);
       }
 
       .btn-secondary {
@@ -174,35 +189,198 @@
         border-color: rgba(255, 255, 255, 0.5);
       }
 
+      .hero .btn-secondary {
+        color: var(--white);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.24);
+        backdrop-filter: blur(12px);
+      }
+
       .hero {
         position: relative;
-        min-height: 720px;
+        min-height: 100vh;
         color: var(--white);
         overflow: hidden;
+        background: #090b0d;
+      }
+
+      .hero-video {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        background: #090b0d;
+      }
+
+      .hero-video span {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        background-position: center;
+        background-size: cover;
+        transform: scale(1);
+        will-change: opacity, transform, background-position;
+      }
+
+      .hero-video span:nth-child(1) {
+        background-image: url("assets/hero-sequence-01-hd.jpg");
+        background-position: center 46%;
+        transform-origin: 62% 48%;
+        animation: cinematicHeroDriftA 36s infinite;
+        animation-delay: 0s;
+      }
+
+      .hero-video span:nth-child(2) {
+        background-image: url("assets/hero-clear-villa.avif");
+        background-position: center 54%;
+        transform-origin: 48% 58%;
+        animation: cinematicHeroDriftB 36s infinite;
+        animation-delay: 9s;
+      }
+
+      .hero-video span:nth-child(3) {
+        background-image: url("assets/hero-sequence-03-hd.jpg");
+        background-position: center 48%;
+        transform-origin: 58% 48%;
+        animation: cinematicHeroDriftC 36s infinite;
+        animation-delay: 18s;
+      }
+
+      .hero-video span:nth-child(4) {
+        background-image: url("assets/hero-sequence-04-hd.jpg");
+        background-position: center 50%;
+        transform-origin: 54% 54%;
+        animation: cinematicHeroDriftD 36s infinite;
+        animation-delay: 27s;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
         background:
-          linear-gradient(90deg, rgba(7, 27, 58, 0.9), rgba(7, 27, 58, 0.52) 48%, rgba(7, 27, 58, 0.16)),
-          url("assets/hero-cover.avif") center / cover;
+          radial-gradient(circle at 72% 40%, rgba(218, 175, 90, 0.16), transparent 34%),
+          linear-gradient(90deg, rgba(7, 9, 12, 0.88), rgba(7, 9, 12, 0.54) 48%, rgba(7, 9, 12, 0.22)),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.56));
       }
 
       .hero::after {
         content: "";
         position: absolute;
         inset: auto 0 0;
+        z-index: 1;
         height: 150px;
-        background: linear-gradient(180deg, transparent, rgba(7, 27, 58, 0.72));
+        background: linear-gradient(180deg, transparent, rgba(7, 9, 12, 0.86));
+      }
+
+      @keyframes cinematicHeroDriftA {
+        0% {
+          opacity: 0;
+          transform: scale(1.03) translate3d(0, 0, 0);
+        }
+        7% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        34% {
+          opacity: 0;
+          transform: scale(1.1) translate3d(-1.8%, -0.8%, 0);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes cinematicHeroDriftB {
+        0% {
+          opacity: 0;
+          transform: scale(1.08) translate3d(-1%, 0.6%, 0);
+        }
+        7% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        34% {
+          opacity: 0;
+          transform: scale(1.02) translate3d(0.8%, -0.6%, 0);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes cinematicHeroDriftC {
+        0% {
+          opacity: 0;
+          transform: scale(1.04) translate3d(1.1%, 0, 0);
+        }
+        7% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        34% {
+          opacity: 0;
+          transform: scale(1.11) translate3d(-1.2%, -0.7%, 0);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes cinematicHeroDriftD {
+        0% {
+          opacity: 0;
+          transform: scale(1.06) translate3d(0, 0.4%, 0);
+        }
+        7% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        34% {
+          opacity: 0;
+          transform: scale(1.02) translate3d(-0.7%, -0.8%, 0);
+        }
+        100% {
+          opacity: 0;
+        }
       }
 
       .hero-inner {
         position: relative;
-        z-index: 1;
-        min-height: 720px;
+        z-index: 2;
+        min-height: 100vh;
         display: flex;
         align-items: center;
-        padding: 96px 0 112px;
+        padding: 56px 0 112px;
       }
 
       .hero-copy {
         width: min(720px, 100%);
+      }
+
+      .hero-brand-lockup {
+        width: min(300px, 64vw);
+        margin-bottom: 20px;
+        transform: translateY(-28px);
+        padding: 0;
+        border: 0;
+        background: transparent;
+      }
+
+      .hero-brand-lockup img {
+        width: 100%;
+        height: auto;
+        opacity: 0.92;
+        filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.42));
       }
 
       .eyebrow {
@@ -225,8 +403,8 @@
 
       h1 {
         margin: 0;
-        font-size: clamp(42px, 7vw, 82px);
-        line-height: 0.98;
+        font-size: clamp(38px, 5.8vw, 68px);
+        line-height: 1.04;
         letter-spacing: 0;
       }
 
@@ -329,6 +507,70 @@
         line-height: 1.55;
       }
 
+      .advantage {
+        background: #ffffff;
+      }
+
+      .advantage-grid {
+        display: grid;
+        grid-template-columns: 1.05fr repeat(2, minmax(0, 0.8fr));
+        gap: 18px;
+      }
+
+      .advantage-lead,
+      .advantage-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 14px 34px rgba(7, 27, 58, 0.06);
+      }
+
+      .advantage-lead {
+        padding: 34px;
+        color: var(--white);
+        background: linear-gradient(135deg, #101820, #26323d);
+      }
+
+      .advantage-lead h2 {
+        margin: 0;
+        font-size: clamp(30px, 4vw, 48px);
+        line-height: 1.08;
+      }
+
+      .advantage-lead p {
+        margin: 20px 0 0;
+        color: #dbe3ea;
+        line-height: 1.7;
+      }
+
+      .advantage-card {
+        min-height: 238px;
+        padding: 28px;
+      }
+
+      .advantage-card span {
+        display: inline-flex;
+        margin-bottom: 18px;
+        padding: 7px 10px;
+        border-radius: 6px;
+        color: var(--blue);
+        background: #eaf3ff;
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .advantage-card h3 {
+        margin: 0;
+        color: var(--navy);
+        font-size: 22px;
+      }
+
+      .advantage-card p {
+        margin: 14px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
       .section-head {
         display: flex;
         align-items: end;
@@ -399,7 +641,7 @@
       }
 
       .office {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.2), rgba(22, 103, 199, 0.12)), url("assets/site-photo-01.jpg");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.2), rgba(22, 103, 199, 0.12)), url("assets/office-entry.webp");
       }
 
       .product-body {
@@ -468,7 +710,7 @@
 
       .project-grid {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
       }
 
@@ -483,22 +725,21 @@
       }
 
       .project-main .project-image {
-        min-height: 464px;
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/site-photo-07.jpg");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/project-resort-rental-111.jfif");
       }
 
-      .project-side {
-        display: grid;
-        gap: 20px;
-      }
-
-      .project-side .project-card:nth-child(1) .project-image {
+      .project-card:nth-child(2) .project-image {
         background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/project-apartment-cluster.jpg");
         background-position: center;
       }
 
-      .project-side .project-card:nth-child(2) .project-image {
+      .project-card:nth-child(3) .project-image {
         background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/project-boutique-hotel.png");
+        background-position: center;
+      }
+
+      .project-card:nth-child(4) .project-image {
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/project-office-commercial-777.webp");
         background-position: center;
       }
 
@@ -822,6 +1063,99 @@
         line-height: 1.6;
       }
 
+      .capabilities {
+        background: var(--paper);
+      }
+
+      .capability-stack {
+        display: grid;
+        gap: 28px;
+      }
+
+      .capability-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+        gap: 34px;
+        align-items: center;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 18px 48px rgba(7, 27, 58, 0.08);
+      }
+
+      .capability-panel:nth-child(even) {
+        grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr);
+      }
+
+      .capability-panel:nth-child(even) .capability-image {
+        order: 2;
+      }
+
+      .capability-image {
+        min-height: 370px;
+        border-radius: 6px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: inset 0 -120px 120px rgba(7, 27, 58, 0.12);
+      }
+
+      .capability-image.factory-image {
+        background-image:
+          linear-gradient(180deg, rgba(7, 27, 58, 0.05), rgba(7, 27, 58, 0.15)),
+          url("assets/factory-prefab-workshop.jfif");
+      }
+
+      .capability-image.construction-image {
+        background-image:
+          linear-gradient(180deg, rgba(7, 27, 58, 0.04), rgba(7, 27, 58, 0.16)),
+          url("assets/construction-site-installation.jfif");
+      }
+
+      .capability-copy {
+        padding: 18px 10px;
+      }
+
+      .capability-copy .eyebrow-lite {
+        display: inline-flex;
+        margin-bottom: 16px;
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .capability-copy h2 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(30px, 4vw, 50px);
+        line-height: 1.05;
+      }
+
+      .capability-copy p {
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.85;
+      }
+
+      .capability-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .capability-tags span {
+        padding: 9px 12px;
+        border-radius: 5px;
+        color: var(--navy);
+        background: #f0f6ff;
+        font-size: 13px;
+        font-weight: 900;
+      }
+
       .project-body {
         padding: 22px;
       }
@@ -883,6 +1217,124 @@
 
       .process {
         background: var(--paper);
+      }
+
+      .leadership {
+        background: #ffffff;
+      }
+
+      .leader-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .leader-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0 18px 44px rgba(15, 40, 74, 0.08);
+      }
+
+      .leader-card.featured {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.88fr) 1.12fr;
+      }
+
+      .leader-photo {
+        aspect-ratio: 4 / 5;
+        min-height: 0;
+        background: #eef4fb;
+      }
+
+      .leader-photo img,
+      .leader-credential img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .leader-photo img {
+        object-position: center top;
+      }
+
+      .leader-body {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .leader-role {
+        display: inline-flex;
+        width: fit-content;
+        padding: 8px 12px;
+        border-radius: 6px;
+        color: var(--blue);
+        background: #eaf3ff;
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .leader-body h3 {
+        margin: 18px 0 8px;
+        color: var(--navy);
+        font-size: clamp(28px, 3vw, 40px);
+        line-height: 1.05;
+      }
+
+      .leader-title {
+        margin: 0 0 18px;
+        color: var(--navy);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .leader-body p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .leader-meta {
+        display: grid;
+        gap: 10px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .leader-meta li {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      .leader-meta b {
+        color: var(--navy);
+        font-size: 14px;
+      }
+
+      .leader-meta span {
+        color: #5f7087;
+        line-height: 1.5;
+      }
+
+      .leader-credential {
+        height: 100%;
+        min-height: 420px;
+        background: #f8fbff;
+      }
+
+      .leader-credential img {
+        object-fit: contain;
+        padding: 18px;
       }
 
       .steps {
@@ -1066,7 +1518,7 @@
         font-weight: 900;
       }
 
-      @media (max-width: 980px) {
+      @media (max-width: 1180px) {
         .menu {
           display: none;
         }
@@ -1083,11 +1535,19 @@
         .section-head,
         .contact-layout,
         .project-grid,
+        .advantage-grid,
         .plans-intro,
+        .capability-panel,
+        .capability-panel:nth-child(even),
+        .leader-card.featured,
         .plan-card.dual,
         .plan-grid {
           grid-template-columns: 1fr;
           display: grid;
+        }
+
+        .capability-panel:nth-child(even) .capability-image {
+          order: 0;
         }
 
         .product-grid,
@@ -1096,12 +1556,28 @@
         .villa-type-grid,
         .hospitality-gallery,
         .type-grid,
+        .leader-grid,
         .factory-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .steps {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1181px) and (max-width: 1380px) {
+        .brand {
+          flex-basis: 220px;
+          max-width: 220px;
+        }
+
+        .menu {
+          justify-content: flex-end;
+        }
+
+        .menu a:nth-child(n + 5) {
+          display: none;
         }
       }
 
@@ -1114,6 +1590,11 @@
           min-height: 68px;
         }
 
+        .brand > span {
+          white-space: normal;
+          max-width: 150px;
+        }
+
         .nav-cta {
           display: none;
         }
@@ -1122,9 +1603,12 @@
           min-width: 34px;
         }
 
-        .brand-mark {
-          width: 38px;
-          height: 38px;
+        .brand {
+          gap: 9px;
+        }
+
+        .brand small {
+          font-size: 11px;
         }
 
         .hero {
@@ -1133,7 +1617,12 @@
 
         .hero-inner {
           min-height: 680px;
-          padding: 74px 0 92px;
+          padding: 52px 0 92px;
+        }
+
+        .hero-brand-lockup {
+          transform: translateY(-16px);
+          width: min(280px, 72vw);
         }
 
         .hero p {
@@ -1145,11 +1634,16 @@
         .solution-grid,
         .villa-gallery,
         .villa-type-grid,
-        .hospitality-gallery,
-        .type-grid,
-        .factory-grid,
-        .steps {
+          .hospitality-gallery,
+          .type-grid,
+          .leader-grid,
+          .factory-grid,
+          .steps {
           grid-template-columns: 1fr;
+        }
+
+        .leader-body {
+          padding: 26px;
         }
 
         .plans-visual {
@@ -1174,8 +1668,23 @@
         }
 
         .project-main .project-image,
-        .project-image {
+        .project-image,
+        .capability-image {
           min-height: 270px;
+        }
+
+        .capability-panel {
+          gap: 18px;
+          padding: 16px;
+        }
+
+        .capability-copy {
+          padding: 8px 4px 4px;
+        }
+
+        .capability-copy p {
+          font-size: 16px;
+          line-height: 1.75;
         }
 
         .footer .shell {
@@ -1195,6 +1704,7 @@
         .line-qr-card {
           grid-template-columns: 1fr;
         }
+
       }
     </style>
   </head>
@@ -1202,17 +1712,20 @@
     <header class="topbar">
       <div class="shell nav">
         <a class="brand" href="#top" aria-label="Thai Villa Group home">
-          <span class="brand-mark">TV</span>
-          <span>Thai Villa Group<small>Modular Building Solutions</small></span>
+          <span>Thai Villa Group<small>Industrialized Building Systems</small></span>
         </a>
         <nav class="menu" aria-label="Main navigation">
+          <a href="#top">Home</a>
+          <a href="#solutions">Solutions</a>
           <a href="#products">Products</a>
           <a href="#projects">Projects</a>
           <a href="#villa-types">Villa Types</a>
           <a href="#hotel-interiors">Hotel</a>
           <a href="#apartment-interiors">Apartment</a>
+          <a href="#office-commercial-space">Office</a>
           <a href="#factory">Factory</a>
           <a href="#process">Process</a>
+          <a href="#leadership">Leadership</a>
           <a href="#contact">Contact</a>
         </nav>
         <div class="nav-actions">
@@ -1227,47 +1740,94 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="Luxury modular villa visual">
+      <section class="hero" aria-label="Thailand industrialized modular construction visual">
+        <div class="hero-video" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="shell hero-inner">
           <div class="hero-copy">
-            <span class="eyebrow">Thailand modular villa specialist</span>
-            <h1>Thai Villa Group</h1>
+            <div class="hero-brand-lockup">
+              <img src="assets/brand-logo.png" alt="Thai Villa Group logo" />
+            </div>
+            <span class="eyebrow">Thailand industrialized building systems</span>
+            <h1>Premium Modular Building & Engineering Solutions in Thailand</h1>
             <p>
-              Premium modular villa solutions for Thailand developers, resorts, and private land owners.
-              Choose a 50-200 sqm villa type, review floor plans, and request a clear quotation for your project.
+              Thailand local manufacturing with integrated supply chain advantages for villas, resorts, hospitality,
+              apartment, staff housing, and commercial projects.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#villa-types">View Villa Types</a>
-              <a class="btn btn-secondary" href="#contact">Request Quotation</a>
+              <a class="btn btn-primary" href="#contact">Request Proposal</a>
+              <a class="btn btn-secondary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="https://wa.me/66925294488?text=Hello%20Thai%20Villa%20Group%2C%20I%20would%20like%20to%20discuss%20a%20modular%20construction%20project." target="_blank" rel="noopener">WhatsApp Consultation</a>
             </div>
-            <div class="hero-note">For resorts, rental villas, staff housing, family homes, and project offices in Thailand</div>
+            <div class="hero-note">For B2B developers, resort operators, industrial parks, staff housing, and commercial project delivery in Thailand</div>
             <div class="hero-metrics" aria-label="Company highlights">
-              <div class="metric"><strong>50-200</strong><span>sqm villa type guide for project planning</span></div>
-              <div class="metric"><strong>4</strong><span>Villa, apartment, hotel, and office systems</span></div>
-              <div class="metric"><strong>TH</strong><span>Designed for Thailand climate and resort use</span></div>
+              <div class="metric"><strong>4</strong><span>Core modular building product systems</span></div>
+              <div class="metric"><strong>Factory</strong><span>Controlled production and repeatable quality</span></div>
+              <div class="metric"><strong>TH</strong><span>Thailand-ready delivery and site coordination</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="solution-band" aria-label="Modular villa value points">
+      <section class="solution-band" aria-label="Industrialized building value points">
         <div class="shell">
           <div class="solution-grid">
-            <div class="solution-item"><strong>Clear Area Options</strong><span>Use 50-200 sqm types to match land size, room count, and budget range.</span></div>
-            <div class="solution-item"><strong>Fast Project Start</strong><span>Begin from a reference layout, then adjust facade, terrace, rooms, and finish level.</span></div>
-            <div class="solution-item"><strong>Thailand Ready</strong><span>Planning for heat, rain, rental use, resort operations, and local installation needs.</span></div>
-            <div class="solution-item"><strong>Quotation Support</strong><span>Send land size and target style; receive a proposal direction and material scope.</span></div>
+            <div class="solution-item"><strong>Industrialized Design</strong><span>Standardized product lines that can be adapted for land size, room count, facade, and operating model.</span></div>
+            <div class="solution-item"><strong>Factory Production</strong><span>Move key construction work into controlled production to improve quality consistency and project speed.</span></div>
+            <div class="solution-item"><strong>Supply Chain Integration</strong><span>Coordinate structure, enclosure, interior, MEP, logistics, and installation requirements as one delivery system.</span></div>
+            <div class="solution-item"><strong>Thailand Delivery</strong><span>Plan around heat, rain, site access, local labor, resort operation, and industrial park project needs.</span></div>
           </div>
+        </div>
+      </section>
+
+      <section class="advantage" id="solutions">
+        <div class="shell advantage-grid">
+          <div class="advantage-lead">
+            <h2>Thailand local factory + China supply chain advantage</h2>
+            <p>
+              Thai Villa Group is positioned for international B2B clients who need controllable budget,
+              stable quality, faster delivery, and local project service in Thailand.
+            </p>
+          </div>
+          <article class="advantage-card">
+            <span>01</span>
+            <h3>Local manufacturing and delivery</h3>
+            <p>Thailand-based production and project coordination reduce cross-border uncertainty and support faster on-site response.</p>
+          </article>
+          <article class="advantage-card">
+            <span>02</span>
+            <h3>Integrated Asian supply chain</h3>
+            <p>Chinese material and component resources are combined with local manufacturing to improve cost control without lowering positioning.</p>
+          </article>
+          <article class="advantage-card">
+            <span>03</span>
+            <h3>Factory-controlled quality</h3>
+            <p>Repeatable modules, controlled production conditions, and inspection checkpoints help stabilize engineering quality.</p>
+          </article>
+          <article class="advantage-card">
+            <span>04</span>
+            <h3>B2B engineering support</h3>
+            <p>Support developers, EPC partners, hotel investors, industrial parks, and overseas companies with bilingual project communication.</p>
+          </article>
+          <article class="advantage-card">
+            <span>05</span>
+            <h3>Modular construction system</h3>
+            <p>Villa, hospitality, apartment, staff housing, and office products are organized into scalable modular building systems.</p>
+          </article>
         </div>
       </section>
 
       <section class="products" id="products">
         <div class="shell">
           <div class="section-head">
-            <h2>Product systems for modern property development</h2>
+            <h2>Industrialized building product lines</h2>
             <p>
-              A modular building portfolio covering private residences, income properties,
-              hospitality expansion, and professional commercial space.
+              Villa, apartment, hotel, and office systems are organized as repeatable product lines for developers,
+              operators, industrial parks, and project owners.
             </p>
           </div>
           <div class="product-grid">
@@ -1275,10 +1835,10 @@
               <div class="product-visual villa" role="img" aria-label="Luxury modular villa"></div>
               <div class="product-body">
                 <h3>Modular Villas</h3>
-                <p>Premium villa units for resorts, private estates, beachfront land, and rental investment projects.</p>
+                <p>Standardized villa modules for resort operators, rental communities, private land development, and hospitality assets.</p>
                 <ul class="spec-list">
                   <li><b>Area</b><span>50-200 sqm</span></li>
-                  <li><b>Best for</b><span>Pool villas, resorts, private homes</span></li>
+                  <li><b>Best for</b><span>Resorts, rental villas, private land</span></li>
                 </ul>
                 <div class="tag-row"><span class="tag">Pool Villa</span><span class="tag">Resort</span><span class="tag">Luxury</span></div>
                 <div class="entry-actions">
@@ -1290,7 +1850,7 @@
               <div class="product-visual apartment" role="img" aria-label="Modern apartment building"></div>
               <div class="product-body">
                 <h3>Apartments</h3>
-                <p>Efficient modular apartments for staff housing, rental buildings, student housing, and mixed-use sites.</p>
+                <p>Repeatable apartment blocks for workforce housing, rental buildings, student accommodation, and mixed-use projects.</p>
                 <ul class="spec-list">
                   <li><b>Layout</b><span>Studio to multi-room blocks</span></li>
                   <li><b>Best for</b><span>Rental income and staff housing</span></li>
@@ -1305,7 +1865,7 @@
               <div class="product-visual hotel" role="img" aria-label="Hotel resort exterior"></div>
               <div class="product-body">
                 <h3>Hotels</h3>
-                <p>Expandable hotel rooms and resort suites built for fast project rollout and consistent guest experience.</p>
+                <p>Repeatable hotel room and suite modules for hospitality expansion, resort operations, and branded guest experience.</p>
                 <ul class="spec-list">
                   <li><b>Module</b><span>Guest room, suite, service block</span></li>
                   <li><b>Best for</b><span>Boutique hotel expansion</span></li>
@@ -1320,12 +1880,54 @@
               <div class="product-visual office" role="img" aria-label="Contemporary modular office interior"></div>
               <div class="product-body">
                 <h3>Offices</h3>
-                <p>Clean, durable office modules for site offices, sales galleries, workspaces, and project operations.</p>
+                <p>Durable office systems for project sites, sales galleries, industrial parks, management centers, and temporary operations.</p>
                 <ul class="spec-list">
                   <li><b>Use</b><span>Sales office, site office, workspace</span></li>
-                  <li><b>Best for</b><span>Project launch and temporary teams</span></li>
+                  <li><b>Best for</b><span>Project launch and B2B operations</span></li>
                 </ul>
                 <div class="tag-row"><span class="tag">Site Office</span><span class="tag">Workspace</span><span class="tag">Sales Office</span></div>
+                <div class="entry-actions">
+                  <a class="btn btn-primary" href="#office-commercial-space">Open Office & Commercial Space</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="capabilities" id="manufacturing-construction">
+        <div class="shell">
+          <div class="capability-stack">
+            <article class="capability-panel">
+              <div class="capability-image factory-image" role="img" aria-label="Modern prefabricated building factory"></div>
+              <div class="capability-copy">
+                <span class="eyebrow-lite">Factory Manufacturing</span>
+                <h2>Modern Prefabricated Building Factory</h2>
+                <p>
+                  We operate a standardized prefabricated building production system for steel structures, light-gauge steel villas, modular houses, wall panels, roofing systems, and interior supporting materials. Unified standards, batch processing, controllable quality, and faster delivery support villas, resort homes, camps, office buildings, factories, and local construction projects in Thailand.
+                </p>
+                <div class="capability-tags">
+                  <span>Steel Processing</span>
+                  <span>Modular Production</span>
+                  <span>Prefab Components</span>
+                  <span>Material Storage</span>
+                </div>
+              </div>
+            </article>
+            <article class="capability-panel">
+              <div class="capability-image construction-image" role="img" aria-label="Professional construction and site installation"></div>
+              <div class="capability-copy">
+                <span class="eyebrow-lite">Site Installation</span>
+                <h2>Professional Construction & Site Installation</h2>
+                <p>
+                  We provide integrated construction services from design, material production, transportation, and site installation through final handover. Our installation team can complete foundation work, steel structure installation, wall systems, roofing systems, doors and windows, interior finishing, and MEP coordination. Standardized workflows shorten schedules, reduce waste, and keep site management clear for villas, guesthouses, commercial buildings, and industrial projects in Thailand.
+                </p>
+                <div class="capability-tags">
+                  <span>Site Installation</span>
+                  <span>Foundation Work</span>
+                  <span>Wall & Roof Systems</span>
+                  <span>Delivery Management</span>
+                </div>
               </div>
             </article>
           </div>
@@ -1335,36 +1937,69 @@
       <section class="projects" id="projects">
         <div class="shell">
           <div class="section-head">
-            <h2>Project showcase</h2>
-            <p>Reference layouts for villa communities, hospitality projects, and commercial modular developments.</p>
+            <h2>Project directions for Thailand development</h2>
+            <p>Reference directions for resort communities, workforce accommodation, hotel expansion, and commercial modular developments.</p>
           </div>
           <div class="project-grid">
             <article class="project-card project-main">
               <div class="project-image" role="img" aria-label="Resort villa project"></div>
               <div class="project-body">
-                <h3>Resort Villa Community</h3>
-                <p>Detached modular villas arranged around landscaped outdoor living, pool decks, and guest pathways.</p>
+                <h3>Resort & Rental Villa Community</h3>
+                <p>Industrialized villa products arranged for resort operations, rental income, outdoor living, and guest circulation.</p>
                 <div class="project-meta"><span>50-200 sqm villas</span><span>Pool deck option</span><span>Rental operation ready</span></div>
               </div>
             </article>
-            <div class="project-side">
-              <article class="project-card">
-                <div class="project-image" role="img" aria-label="Modular apartment project"></div>
-                <div class="project-body">
-                  <h3>Apartment Cluster</h3>
-                  <p>Compact modular residential blocks for rental income and staff accommodation.</p>
-                  <div class="project-meta"><span>Repeatable blocks</span><span>Fast rollout</span></div>
-                </div>
-              </article>
-              <article class="project-card">
-                <div class="project-image" role="img" aria-label="Boutique hotel suite project"></div>
-                <div class="project-body">
-                  <h3>Boutique Hotel Suite</h3>
-                  <p>Repeatable room modules designed to shorten hospitality project delivery timelines.</p>
-                  <div class="project-meta"><span>Guest rooms</span><span>Suite modules</span></div>
-                </div>
-              </article>
-            </div>
+            <article class="project-card">
+              <div class="project-image" role="img" aria-label="Modular apartment project"></div>
+              <div class="project-body">
+                <h3>Workforce Apartment Cluster</h3>
+                <p>Repeatable residential blocks for staff accommodation, rental income, and industrial park support facilities.</p>
+                <div class="project-meta"><span>Repeatable blocks</span><span>Fast rollout</span></div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image" role="img" aria-label="Boutique hotel suite project"></div>
+              <div class="project-body">
+                <h3>Hotel Room System</h3>
+                <p>Room and suite modules designed to shorten hospitality delivery timelines and improve operating consistency.</p>
+                <div class="project-meta"><span>Guest rooms</span><span>Suite modules</span></div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image" role="img" aria-label="Office and commercial modular project"></div>
+              <div class="project-body">
+                <h3>Office & Commercial Space</h3>
+                <p>Modular office, sales center, showroom, and site office systems for project launch, sales operations, and commercial use.</p>
+                <div class="project-meta"><span>Site Office</span><span>Sales Center</span><span>Showroom</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="hospitality detail-section" id="office-commercial-space">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Office & Commercial Space</h2>
+            <p>Modular office, sales center, showroom, site office, and commercial interior references for B2B project delivery.</p>
+          </div>
+          <div class="hospitality-gallery">
+            <figure class="hospitality-shot">
+              <img src="assets/office-interior-01.webp" alt="Modular office lounge and meeting area" />
+              <figcaption>Executive Office Lounge</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/office-interior-02.webp" alt="Sales center modular commercial interior" />
+              <figcaption>Sales Center</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/office-interior-03.webp" alt="Commercial showroom modular building" />
+              <figcaption>Commercial Showroom</figcaption>
+            </figure>
+            <figure class="hospitality-shot">
+              <img src="assets/office-interior-01.webp" alt="Site office and staff operation buildings" />
+              <figcaption>Site Office & Operations</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -1388,19 +2023,19 @@
           </div>
           <div class="villa-gallery" aria-label="Villa application scenario references">
             <figure class="villa-shot">
-              <img src="assets/site-photo-02.jpg" alt="Private land for villa development" />
+              <img src="assets/villa-use-private-land.jfif" alt="Private land for villa development" />
               <figcaption><strong>Private Land</strong><span>For customers who already own land and want to place a modular villa on site.</span></figcaption>
             </figure>
             <figure class="villa-shot">
-              <img src="assets/site-photo-05.jpg" alt="Resort rental villa setting" />
+              <img src="assets/villa-use-resort-rental.jfif" alt="Resort rental villa setting" />
               <figcaption><strong>Resort Rental</strong><span>For resort operators and investors planning villas for short-stay rental income.</span></figcaption>
             </figure>
             <figure class="villa-shot">
-              <img src="assets/site-photo-03.jpg" alt="Pool villa leisure area" />
+              <img src="assets/villa-use-pool-villa.jfif" alt="Pool villa leisure area" />
               <figcaption><strong>Pool Villa</strong><span>For higher-end private or rental villas with outdoor leisure and pool deck planning.</span></figcaption>
             </figure>
             <figure class="villa-shot">
-              <img src="assets/project-apartment-cluster.jpg" alt="Staff housing modular accommodation" />
+              <img src="assets/villa-use-staff-housing.jfif" alt="Staff housing modular accommodation" />
               <figcaption><strong>Staff Housing</strong><span>For project teams, factory staff, resort employees, and temporary accommodation needs.</span></figcaption>
             </figure>
           </div>
@@ -1545,14 +2180,14 @@
       <section class="factory" id="factory">
         <div class="shell">
           <div class="section-head">
-            <h2>Factory strength behind every project</h2>
-            <p>Controlled production, repeatable quality checks, and coordinated logistics help reduce on-site uncertainty.</p>
+            <h2>Factory and supply chain strength</h2>
+            <p>Controlled production, material coordination, repeatable quality checks, and logistics planning help reduce on-site uncertainty.</p>
           </div>
           <div class="factory-grid">
             <article class="factory-item">
               <div class="factory-number">01</div>
               <h3>Modular Production</h3>
-              <p>Factory-built structural, enclosure, interior, and MEP components for repeatable project quality.</p>
+              <p>Factory-built structural, enclosure, interior, and MEP components for repeatable industrialized project quality.</p>
             </article>
             <article class="factory-item">
               <div class="factory-number">02</div>
@@ -1561,8 +2196,8 @@
             </article>
             <article class="factory-item">
               <div class="factory-number">03</div>
-              <h3>Design Coordination</h3>
-              <p>Project drawings, module layout, engineering coordination, and Thai climate adaptation support.</p>
+              <h3>Engineering Coordination</h3>
+              <p>Project drawings, module layout, engineering interface, Thai climate adaptation, and site condition coordination.</p>
             </article>
             <article class="factory-item">
               <div class="factory-number">04</div>
@@ -1604,6 +2239,49 @@
               <div class="step-number">5</div>
               <h3>Delivery & Support</h3>
               <p>Coordinate shipping, installation guidance, documentation, and after-sales technical support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="leadership" id="leadership">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Leadership Team</h2>
+            <p>The chairman and CEO lead company strategy, project resources, Thailand local delivery, and international B2B customer communication.</p>
+          </div>
+          <div class="leader-grid">
+            <article class="leader-card">
+              <div class="leader-photo">
+                <img src="assets/sum-liu-portrait.png" alt="SUM LIU, Chairman of ThaiVillaGroup Holdings" />
+              </div>
+              <div class="leader-body">
+                <span class="leader-role">Chairman</span>
+                <h3>SUM.LIU</h3>
+                <div class="leader-title">ThaiVillaGroup Holdings Chairman</div>
+                <p>Chairman-level leadership across ThaiVillaGroup Holdings, Southeast Asia real estate networks, and Thailand industrial land resources.</p>
+                <ul class="leader-meta">
+                  <li><b>ThaiVillaGroup Holdings</b><span>Chairman<br>泰墅集团控股 董事长</span></li>
+                  <li><b>Southeast Asia Real Estate Association</b><span>Executive President<br>东南亚房地产业协会 执行会长</span></li>
+                  <li><b>Thailand Industrial Land Big Data Center</b><span>Executive President<br>泰国工业地产大数据中心 执行会长</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="leader-card">
+              <div class="leader-photo">
+                <img src="assets/stone-shi-portrait.png" alt="STONE SHI, CEO of ThaiVillaGroup Holdings" />
+              </div>
+              <div class="leader-body">
+                <span class="leader-role">CEO</span>
+                <h3>STONE.SHI</h3>
+                <div class="leader-title">ThaiVillaGroup Holdings Chief Executive Officer</div>
+                <p>Responsible for company strategy, international customer communication, quotation coordination, and Thailand project development.</p>
+                <ul class="leader-meta">
+                  <li><b>ThaiVillaGroup Holdings</b><span>Chief Executive Officer（CEO）<br>泰墅集团控股 首席执行官（CEO）</span></li>
+                  <li><b>Southeast Asia Real Estate Association</b><span>Vice Secretary General<br>东南亚房地产业协会 副秘书长</span></li>
+                  <li><b>Thailand Industrial Land Big Data Center</b><span>Deputy Director<br>泰国工业地产大数据中心 副主任</span></li>
+                </ul>
+              </div>
             </article>
           </div>
         </div>
@@ -1681,16 +2359,89 @@
       W
     </a>
     <script>
-      const detailIds = ["villa-types", "hotel-interiors", "apartment-interiors"];
+      const detailIds = ["villa-types", "hotel-interiors", "apartment-interiors", "office-commercial-space"];
       const translations = {
         "Modular Building Solutions": ["装配式建筑解决方案", "โซลูชันอาคารโมดูลาร์"],
+        "Industrialized Building Systems": ["建筑工业化系统", "ระบบอาคารอุตสาหกรรม"],
+        "Home": ["首页", "หน้าแรก"],
+        "Solutions": ["解决方案", "โซลูชัน"],
+        "Factory Manufacturing": ["工厂制造", "การผลิตในโรงงาน"],
+        "Modern Prefabricated Building Factory": ["现代化预制建筑工厂", "โรงงานอาคารสำเร็จรูปสมัยใหม่"],
+        "We operate a standardized prefabricated building production system for steel structures, light-gauge steel villas, modular houses, wall panels, roofing systems, and interior supporting materials. Unified standards, batch processing, controllable quality, and faster delivery support villas, resort homes, camps, office buildings, factories, and local construction projects in Thailand.": ["我们拥有标准化预制建筑生产体系，可进行钢结构、轻钢别墅、模块化房屋、墙板、屋面系统及室内配套材料的加工生产。工厂采用统一标准、批量化加工、质量可控、交付速度快，适合别墅、度假屋、营地、办公楼、厂房及泰国本地工程项目。", "เรามีระบบการผลิตอาคารสำเร็จรูปที่ได้มาตรฐาน สำหรับโครงสร้างเหล็ก วิลล่าโครงสร้างเหล็กเบา บ้านโมดูลาร์ แผ่นผนัง ระบบหลังคา และวัสดุตกแต่งภายใน โรงงานใช้มาตรฐานเดียวกัน การผลิตเป็นชุด ควบคุมคุณภาพได้ และส่งมอบได้รวดเร็ว เหมาะสำหรับวิลล่า บ้านพักรีสอร์ต แคมป์ อาคารสำนักงาน โรงงาน และโครงการก่อสร้างในประเทศไทย"],
+        "Steel Processing": ["钢结构加工", "การแปรรูปโครงสร้างเหล็ก"],
+        "Prefab Components": ["预制构件", "ชิ้นส่วนสำเร็จรูป"],
+        "Material Storage": ["材料仓储", "คลังวัสดุ"],
+        "Site Installation": ["现场安装", "การติดตั้งหน้างาน"],
+        "Professional Construction & Site Installation": ["专业施工与现场安装", "งานก่อสร้างและติดตั้งหน้างานอย่างมืออาชีพ"],
+        "We provide integrated construction services from design, material production, transportation, and site installation through final handover. Our installation team can complete foundation work, steel structure installation, wall systems, roofing systems, doors and windows, interior finishing, and MEP coordination. Standardized workflows shorten schedules, reduce waste, and keep site management clear for villas, guesthouses, commercial buildings, and industrial projects in Thailand.": ["我们提供从设计、材料生产、运输、现场安装到交付的一体化施工服务。施工团队可完成基础施工、钢结构安装、墙体系统、屋面系统、门窗安装、室内装修及水电配套。施工流程标准化，工期短、损耗低、现场管理清晰，适合泰国本地别墅、民宿、商业建筑和工业项目。", "เราให้บริการก่อสร้างแบบครบวงจร ตั้งแต่การออกแบบ การผลิตวัสดุ การขนส่ง การติดตั้งหน้างาน ไปจนถึงการส่งมอบ ทีมติดตั้งสามารถทำงานฐานราก ติดตั้งโครงสร้างเหล็ก ระบบผนัง ระบบหลังคา ประตูหน้าต่าง งานตกแต่งภายใน และงานระบบไฟฟ้า-ประปาได้ กระบวนการทำงานที่เป็นมาตรฐานช่วยลดระยะเวลาก่อสร้าง ลดความสูญเสีย และทำให้การจัดการหน้างานชัดเจน เหมาะสำหรับวิลล่า โฮมสเตย์ อาคารพาณิชย์ และโครงการอุตสาหกรรมในประเทศไทย"],
+        "Foundation Work": ["基础施工", "งานฐานราก"],
+        "Wall & Roof Systems": ["墙体屋面系统", "ระบบผนังและหลังคา"],
+        "Delivery Management": ["交付管理", "การจัดการส่งมอบ"],
+        "Thailand industrialized building systems": ["泰国建筑工业化系统", "ระบบอาคารอุตสาหกรรมในประเทศไทย"],
+        "Premium Modular Building & Engineering Solutions in Thailand": ["泰国高端模块化建筑与工程解决方案", "โซลูชันอาคารโมดูลาร์และวิศวกรรมระดับพรีเมียมในประเทศไทย"],
+        "Thailand local manufacturing with integrated supply chain advantages for villas, resorts, hospitality, apartment, staff housing, and commercial projects.": ["依托泰国本地制造与整合供应链优势，服务别墅、度假村、酒店、公寓、员工住房和商业项目。", "การผลิตในประเทศไทยพร้อมข้อได้เปรียบด้านซัพพลายเชนแบบบูรณาการ สำหรับวิลล่า รีสอร์ต งานโรงแรม อพาร์ตเมนต์ ที่พักพนักงาน และโครงการเชิงพาณิชย์"],
+        "Request Proposal": ["申请方案", "ขอข้อเสนอ"],
+        "View Projects": ["查看项目", "ดูโครงการ"],
+        "WhatsApp Consultation": ["WhatsApp 咨询", "ปรึกษาทาง WhatsApp"],
+        "Modular construction systems for developers, resorts, factories, hotels, apartments, and project owners in Thailand. We integrate product design, factory production, supply chain coordination, and project delivery support.": ["面向泰国开发商、度假村、工厂、酒店、公寓和项目业主的装配式建筑系统。我们整合产品设计、工厂生产、供应链协调和项目交付支持。", "ระบบก่อสร้างโมดูลาร์สำหรับผู้พัฒนาโครงการ รีสอร์ต โรงงาน โรงแรม อพาร์ตเมนต์ และเจ้าของโครงการในประเทศไทย เราบูรณาการการออกแบบผลิตภัณฑ์ การผลิตในโรงงาน การประสานซัพพลายเชน และการส่งมอบโครงการ"],
+        "Thailand local factory + China supply chain advantage": ["泰国本地工厂 + 中国供应链优势", "โรงงานท้องถิ่นไทย + ข้อได้เปรียบซัพพลายเชนจีน"],
+        "Thai Villa Group is positioned for international B2B clients who need controllable budget, stable quality, faster delivery, and local project service in Thailand.": ["Thai Villa Group 面向国际B端客户，解决可控预算、稳定品质、快速交付和泰国本地项目服务需求。", "Thai Villa Group วางตำแหน่งสำหรับลูกค้า B2B ระหว่างประเทศที่ต้องการงบประมาณควบคุมได้ คุณภาพเสถียร ส่งมอบเร็ว และบริการโครงการในไทย"],
+        "Local manufacturing and delivery": ["本地制造与交付", "การผลิตและส่งมอบในพื้นที่"],
+        "Thailand-based production and project coordination reduce cross-border uncertainty and support faster on-site response.": ["泰国本地生产和项目协调减少跨境不确定性，并支持更快的现场响应。", "การผลิตและประสานงานโครงการในไทยช่วยลดความไม่แน่นอนข้ามพรมแดน และตอบสนองหน้างานได้เร็วขึ้น"],
+        "Integrated Asian supply chain": ["亚洲供应链整合", "ซัพพลายเชนเอเชียแบบบูรณาการ"],
+        "Chinese material and component resources are combined with local manufacturing to improve cost control without lowering positioning.": ["中国材料和部品资源与泰国本地制造结合，在不降低定位的前提下提升成本控制能力。", "ทรัพยากรวัสดุและชิ้นส่วนจากจีนผสานกับการผลิตในไทย เพื่อควบคุมต้นทุนโดยไม่ลดตำแหน่งแบรนด์"],
+        "Factory-controlled quality": ["工厂可控品质", "คุณภาพที่ควบคุมโดยโรงงาน"],
+        "Repeatable modules, controlled production conditions, and inspection checkpoints help stabilize engineering quality.": ["可复制模块、受控生产环境和检查节点帮助稳定工程品质。", "โมดูลที่ทำซ้ำได้ เงื่อนไขการผลิตที่ควบคุม และจุดตรวจสอบช่วยให้คุณภาพวิศวกรรมเสถียร"],
+        "B2B engineering support": ["B端工程支持", "การสนับสนุนวิศวกรรม B2B"],
+        "Support developers, EPC partners, hotel investors, industrial parks, and overseas companies with bilingual project communication.": ["支持开发商、EPC合作方、酒店投资方、工业园区和出海企业，并提供多语言项目沟通。", "สนับสนุนผู้พัฒนาโครงการ พันธมิตร EPC นักลงทุนโรงแรม นิคมอุตสาหกรรม และบริษัทต่างชาติ พร้อมการสื่อสารโครงการหลายภาษา"],
+        "Modular construction system": ["模块化建筑体系", "ระบบก่อสร้างโมดูลาร์"],
+        "Villa, hospitality, apartment, staff housing, and office products are organized into scalable modular building systems.": ["别墅、酒店、公寓、员工住房和办公室产品被组织成可扩展的模块化建筑体系。", "ผลิตภัณฑ์วิลล่า งานโรงแรม อพาร์ตเมนต์ ที่พักพนักงาน และสำนักงานถูกจัดเป็นระบบอาคารโมดูลาร์ที่ขยายได้"],
+        "Explore Building Systems": ["查看建筑系统", "ดูระบบอาคาร"],
+        "View Project Direction": ["查看项目方向", "ดูแนวทางโครงการ"],
+        "For B2B developers, resort operators, industrial parks, staff housing, and commercial project delivery in Thailand": ["适用于泰国B端开发商、度假村运营方、工业园区、员工住房和商业项目交付。", "สำหรับผู้พัฒนาโครงการ B2B ผู้ประกอบการรีสอร์ต นิคมอุตสาหกรรม ที่พักพนักงาน และการส่งมอบโครงการเชิงพาณิชย์ในไทย"],
+        "Core modular building product systems": ["核心装配式建筑产品系统", "ระบบผลิตภัณฑ์อาคารโมดูลาร์หลัก"],
+        "Controlled production and repeatable quality": ["受控生产和可复制质量", "การผลิตที่ควบคุมได้และคุณภาพที่ทำซ้ำได้"],
+        "Thailand-ready delivery and site coordination": ["适配泰国的交付和现场协调", "การส่งมอบและประสานไซต์งานที่พร้อมสำหรับไทย"],
+        "Industrialized Design": ["工业化设计", "การออกแบบเชิงอุตสาหกรรม"],
+        "Standardized product lines that can be adapted for land size, room count, facade, and operating model.": ["标准化产品线，可根据土地面积、房间数量、立面和运营模式调整。", "ไลน์ผลิตภัณฑ์มาตรฐานที่ปรับได้ตามขนาดที่ดิน จำนวนห้อง ฟาซาด และรูปแบบการดำเนินงาน"],
+        "Factory Production": ["工厂化生产", "การผลิตในโรงงาน"],
+        "Move key construction work into controlled production to improve quality consistency and project speed.": ["把关键建造环节前移到受控生产环境，提高质量稳定性和项目速度。", "ย้ายงานก่อสร้างหลักเข้าสู่การผลิตที่ควบคุมได้ เพื่อเพิ่มความสม่ำเสมอของคุณภาพและความเร็วโครงการ"],
+        "Supply Chain Integration": ["供应链整合", "บูรณาการซัพพลายเชน"],
+        "Coordinate structure, enclosure, interior, MEP, logistics, and installation requirements as one delivery system.": ["把结构、围护、内装、机电、物流和安装需求作为一个交付系统统一协调。", "ประสานโครงสร้าง เปลือกอาคาร งานภายใน ระบบ MEP โลจิสติกส์ และการติดตั้งเป็นระบบส่งมอบเดียว"],
+        "Thailand Delivery": ["泰国交付", "การส่งมอบในประเทศไทย"],
+        "Plan around heat, rain, site access, local labor, resort operation, and industrial park project needs.": ["围绕高温、雨季、现场通道、本地劳动力、度假村运营和工业园项目需求进行规划。", "วางแผนตามอากาศร้อน ฝน ทางเข้าไซต์ แรงงานท้องถิ่น การดำเนินงานรีสอร์ต และความต้องการโครงการนิคมอุตสาหกรรม"],
+        "Industrialized building product lines": ["建筑工业化产品线", "ไลน์ผลิตภัณฑ์อาคารอุตสาหกรรม"],
+        "Villa, apartment, hotel, and office systems are organized as repeatable product lines for developers, operators, industrial parks, and project owners.": ["别墅、公寓、酒店和办公室系统被组织成可复制产品线，服务开发商、运营方、工业园区和项目业主。", "ระบบวิลล่า อพาร์ตเมนต์ โรงแรม และสำนักงานถูกจัดเป็นไลน์ผลิตภัณฑ์ที่ทำซ้ำได้ สำหรับผู้พัฒนา ผู้ประกอบการ นิคมอุตสาหกรรม และเจ้าของโครงการ"],
+        "Standardized villa modules for resort operators, rental communities, private land development, and hospitality assets.": ["标准化别墅模块，适用于度假村运营、出租社区、私人土地开发和酒店资产。", "โมดูลวิลล่ามาตรฐานสำหรับผู้ประกอบการรีสอร์ต ชุมชนให้เช่า การพัฒนาที่ดินส่วนตัว และสินทรัพย์ด้านบริการ"],
+        "Resorts, rental villas, private land": ["度假村、出租别墅、私人土地", "รีสอร์ต วิลล่าให้เช่า ที่ดินส่วนตัว"],
+        "Repeatable apartment blocks for workforce housing, rental buildings, student accommodation, and mixed-use projects.": ["可复制公寓模块，适用于员工住房、出租楼、学生宿舍和混合用途项目。", "บล็อกอพาร์ตเมนต์ที่ทำซ้ำได้ สำหรับที่พักแรงงาน อาคารให้เช่า หอพักนักศึกษา และโครงการผสมผสาน"],
+        "Repeatable hotel room and suite modules for hospitality expansion, resort operations, and branded guest experience.": ["可复制酒店客房和套房模块，服务酒店扩建、度假村运营和品牌化入住体验。", "โมดูลห้องพักและห้องสวีทที่ทำซ้ำได้ สำหรับการขยายงานโรงแรม การดำเนินงานรีสอร์ต และประสบการณ์ผู้เข้าพักตามแบรนด์"],
+        "Durable office systems for project sites, sales galleries, industrial parks, management centers, and temporary operations.": ["耐用办公室系统，适用于项目现场、销售展厅、工业园区、管理中心和临时运营。", "ระบบสำนักงานที่ทนทานสำหรับไซต์โครงการ แกลเลอรีขาย นิคมอุตสาหกรรม ศูนย์บริหาร และการดำเนินงานชั่วคราว"],
+        "Project launch and B2B operations": ["项目启动和B端运营", "เริ่มโครงการและการดำเนินงาน B2B"],
+        "Project directions for Thailand development": ["泰国项目开发方向", "แนวทางโครงการสำหรับการพัฒนาในไทย"],
+        "Reference directions for resort communities, workforce accommodation, hotel expansion, and commercial modular developments.": ["展示度假社区、员工住宿、酒店扩建和商业装配式开发的参考方向。", "แนวทางอ้างอิงสำหรับชุมชนรีสอร์ต ที่พักแรงงาน การขยายโรงแรม และอาคารโมดูลาร์เชิงพาณิชย์"],
+        "Resort & Rental Villa Community": ["度假及出租别墅社区", "ชุมชนรีสอร์ตและวิลล่าให้เช่า"],
+        "Industrialized villa products arranged for resort operations, rental income, outdoor living, and guest circulation.": ["面向度假村运营、出租收益、户外生活和客人动线组织的工业化别墅产品。", "ผลิตภัณฑ์วิลล่าอุตสาหกรรมที่จัดวางเพื่อการดำเนินงานรีสอร์ต รายได้ค่าเช่า พื้นที่กลางแจ้ง และการสัญจรของแขก"],
+        "Workforce Apartment Cluster": ["员工公寓组团", "กลุ่มอพาร์ตเมนต์แรงงาน"],
+        "Repeatable residential blocks for staff accommodation, rental income, and industrial park support facilities.": ["可复制住宅模块，适用于员工住宿、出租收益和工业园配套设施。", "บล็อกที่พักอาศัยที่ทำซ้ำได้ สำหรับที่พักพนักงาน รายได้ค่าเช่า และสิ่งอำนวยความสะดวกสนับสนุนนิคมอุตสาหกรรม"],
+        "Hotel Room System": ["酒店客房系统", "ระบบห้องพักโรงแรม"],
+        "Room and suite modules designed to shorten hospitality delivery timelines and improve operating consistency.": ["客房和套房模块用于缩短酒店项目交付周期，并提升运营一致性。", "โมดูลห้องพักและห้องสวีทที่ออกแบบเพื่อลดเวลาส่งมอบงานโรงแรมและเพิ่มความสม่ำเสมอในการดำเนินงาน"],
+        "Modular office, sales center, showroom, and site office systems for project launch, sales operations, and commercial use.": ["模块化办公室、销售中心、展厅和现场办公室系统，适用于项目启动、销售运营和商业用途。", "ระบบสำนักงานโมดูลาร์ ศูนย์ขาย โชว์รูม และสำนักงานไซต์งาน สำหรับเริ่มโครงการ การขาย และการใช้งานเชิงพาณิชย์"],
+        "Showroom": ["展厅", "โชว์รูม"],
+        "Factory and supply chain strength": ["工厂与供应链实力", "ศักยภาพโรงงานและซัพพลายเชน"],
+        "Controlled production, material coordination, repeatable quality checks, and logistics planning help reduce on-site uncertainty.": ["受控生产、材料协调、可复制质检和物流规划，帮助减少现场不确定性。", "การผลิตที่ควบคุมได้ การประสานวัสดุ การตรวจคุณภาพที่ทำซ้ำได้ และการวางแผนโลจิสติกส์ ช่วยลดความไม่แน่นอนหน้างาน"],
+        "Factory-built structural, enclosure, interior, and MEP components for repeatable industrialized project quality.": ["工厂生产结构、围护、内装和机电组件，形成可复制的工业化项目质量。", "ผลิตชิ้นส่วนโครงสร้าง เปลือกอาคาร ภายใน และระบบ MEP ในโรงงาน เพื่อคุณภาพโครงการอุตสาหกรรมที่ทำซ้ำได้"],
+        "Engineering Coordination": ["工程协调", "ประสานงานวิศวกรรม"],
+        "Project drawings, module layout, engineering interface, Thai climate adaptation, and site condition coordination.": ["项目图纸、模块布局、工程接口、泰国气候适配和现场条件协调。", "แบบโครงการ ผังโมดูล อินเทอร์เฟซวิศวกรรม การปรับตามภูมิอากาศไทย และการประสานเงื่อนไขไซต์งาน"],
         "Products": ["产品", "สินค้า"],
         "Projects": ["项目", "โครงการ"],
         "Villa Types": ["别墅户型", "แบบวิลล่า"],
         "Hotel": ["酒店", "โรงแรม"],
         "Apartment": ["公寓", "อพาร์ตเมนต์"],
+        "Office": ["办公", "สำนักงาน"],
         "Factory": ["工厂", "โรงงาน"],
         "Process": ["流程", "ขั้นตอน"],
+        "Leadership": ["管理层", "ผู้บริหาร"],
         "Contact": ["联系", "ติดต่อ"],
         "Get a Quote": ["获取报价", "ขอใบเสนอราคา"],
         "Thailand modular villa specialist": ["泰国装配式别墅专家", "ผู้เชี่ยวชาญวิลล่าโมดูลาร์ในไทย"],
@@ -1740,6 +2491,13 @@
         "Site Office": ["现场办公室", "สำนักงานไซต์งาน"],
         "Workspace": ["工作空间", "พื้นที่ทำงาน"],
         "Sales Office": ["销售办公室", "สำนักงานขาย"],
+        "Office & Commercial Space": ["办公与商业空间", "สำนักงานและพื้นที่เชิงพาณิชย์"],
+        "Open Office & Commercial Space": ["查看办公与商业空间", "ดูสำนักงานและพื้นที่เชิงพาณิชย์"],
+        "Modular office, sales center, showroom, site office, and commercial interior references for B2B project delivery.": ["展示模块化办公室、销售中心、展厅、现场办公室和商业内装参考，用于B端项目交付。", "ตัวอย่างสำนักงานโมดูลาร์ ศูนย์ขาย โชว์รูม สำนักงานไซต์งาน และภายในเชิงพาณิชย์สำหรับการส่งมอบโครงการ B2B"],
+        "Executive Office Lounge": ["高管办公休息区", "เลานจ์สำนักงานผู้บริหาร"],
+        "Sales Center": ["销售中心", "ศูนย์ขาย"],
+        "Commercial Showroom": ["商业展厅", "โชว์รูมเชิงพาณิชย์"],
+        "Site Office & Operations": ["现场办公室与运营空间", "สำนักงานไซต์งานและพื้นที่ปฏิบัติการ"],
         "Open Villa Type Guide": ["进入别墅户型", "เปิดคู่มือแบบวิลล่า"],
         "Open Apartment Interiors": ["查看公寓内装", "ดูภายในอพาร์ตเมนต์"],
         "Open Hotel Interiors": ["查看酒店内装", "ดูภายในโรงแรม"],
@@ -1818,6 +2576,37 @@
         "Manufacture modules and components under controlled factory conditions with quality inspection.": ["在受控工厂环境中生产模块和组件，并进行质量检验。", "ผลิตโมดูลและชิ้นส่วนในสภาพโรงงานที่ควบคุมได้ พร้อมตรวจคุณภาพ"],
         "Delivery & Support": ["交付与支持", "ส่งมอบและสนับสนุน"],
         "Coordinate shipping, installation guidance, documentation, and after-sales technical support.": ["协调运输、安装指导、资料文件和售后技术支持。", "ประสานการขนส่ง คำแนะนำติดตั้ง เอกสาร และการสนับสนุนเทคนิคหลังการขาย"],
+        "Leadership Team": ["公司管理层", "ทีมผู้บริหาร"],
+        "Project communication is led directly by the company decision makers, with Thailand-based business, land, and modular construction resources.": ["项目沟通由公司决策层直接负责，并整合泰国本地商务、土地和装配式建筑资源。", "การสื่อสารโครงการนำโดยผู้มีอำนาจตัดสินใจของบริษัท พร้อมทรัพยากรด้านธุรกิจ ที่ดิน และงานก่อสร้างโมดูลาร์ในประเทศไทย"],
+        "The chairman and CEO lead company strategy, project resources, Thailand local delivery, and international B2B customer communication.": ["董事长与CEO共同负责公司战略、项目资源、泰国本地交付和国际B端客户沟通。", "ประธานกรรมการและ CEO รับผิดชอบกลยุทธ์บริษัท ทรัพยากรโครงการ การส่งมอบในไทย และการสื่อสารกับลูกค้า B2B ระหว่างประเทศ"],
+        "CEO": ["CEO", "CEO"],
+        "SUM.LIU": ["SUM.LIU", "SUM.LIU"],
+        "STONE.SHI": ["STONE.SHI", "STONE.SHI"],
+        "ThaiVillaGroup Holdings Chairman": ["泰墅集团控股 董事长", "ประธานกรรมการ ThaiVillaGroup Holdings"],
+        "ThaiVillaGroup Holdings Chief Executive Officer": ["泰墅集团控股 首席执行官", "ประธานเจ้าหน้าที่บริหาร ThaiVillaGroup Holdings"],
+        "Chairman-level leadership across ThaiVillaGroup Holdings, Southeast Asia real estate networks, and Thailand industrial land resources.": ["统筹泰墅集团控股、东南亚房地产资源网络和泰国工业地产资源的董事长级战略领导。", "ผู้นำระดับประธานกรรมการ ครอบคลุม ThaiVillaGroup Holdings เครือข่ายอสังหาริมทรัพย์เอเชียตะวันออกเฉียงใต้ และทรัพยากรที่ดินอุตสาหกรรมในไทย"],
+        "Responsible for company strategy, international customer communication, quotation coordination, and Thailand project development.": ["负责公司战略、国际客户沟通、报价协调和泰国项目开发。", "รับผิดชอบกลยุทธ์บริษัท การสื่อสารกับลูกค้าต่างประเทศ การประสานใบเสนอราคา และการพัฒนาโครงการในประเทศไทย"],
+        "ThaiVillaGroup Holdings": ["泰墅集团控股", "ThaiVillaGroup Holdings"],
+        "Chairman<br>泰墅集团控股 董事长": ["董事长<br>泰墅集团控股 董事长", "ประธานกรรมการ<br>ThaiVillaGroup Holdings"],
+        "Chief Executive Officer（CEO）<br>泰墅集团控股 首席执行官（CEO）": ["首席执行官（CEO）<br>泰墅集团控股 首席执行官（CEO）", "ประธานเจ้าหน้าที่บริหาร (CEO)<br>ThaiVillaGroup Holdings"],
+        "Southeast Asia Real Estate Association": ["东南亚房地产业协会", "สมาคมอสังหาริมทรัพย์เอเชียตะวันออกเฉียงใต้"],
+        "Executive President<br>东南亚房地产业协会 执行会长": ["执行会长<br>东南亚房地产业协会 执行会长", "นายกบริหาร<br>สมาคมอสังหาริมทรัพย์เอเชียตะวันออกเฉียงใต้"],
+        "Vice Secretary General<br>东南亚房地产业协会 副秘书长": ["副秘书长<br>东南亚房地产业协会 副秘书长", "รองเลขาธิการ<br>สมาคมอสังหาริมทรัพย์เอเชียตะวันออกเฉียงใต้"],
+        "Thailand Industrial Land Big Data Center": ["泰国工业地产大数据中心", "ศูนย์ข้อมูลขนาดใหญ่ที่ดินอุตสาหกรรมแห่งประเทศไทย"],
+        "Executive President<br>泰国工业地产大数据中心 执行会长": ["执行会长<br>泰国工业地产大数据中心 执行会长", "นายกบริหาร<br>ศูนย์ข้อมูลขนาดใหญ่ที่ดินอุตสาหกรรมแห่งประเทศไทย"],
+        "Deputy Director<br>泰国工业地产大数据中心 副主任": ["副主任<br>泰国工业地产大数据中心 副主任", "รองผู้อำนวยการ<br>ศูนย์ข้อมูลขนาดใหญ่ที่ดินอุตสาหกรรมแห่งประเทศไทย"],
+        "Role": ["职务", "ตำแหน่ง"],
+        "Chief Executive Officer": ["首席执行官", "ประธานเจ้าหน้าที่บริหาร"],
+        "Chinese title": ["中文职务", "ตำแหน่งภาษาจีน"],
+        "公司CEO": ["公司CEO", "CEO บริษัท"],
+        "Thai title": ["泰文职务", "ตำแหน่งภาษาไทย"],
+        "ประธานเจ้าหน้าที่บริหาร": ["ประธานเจ้าหน้าที่บริหาร", "ประธานเจ้าหน้าที่บริหาร"],
+        "Chairman": ["董事长", "ประธานกรรมการ"],
+        "Company Chairman": ["公司董事长", "ประธานกรรมการบริษัท"],
+        "Responsible for board-level direction, partner resources, Thailand industrial land coordination, and major project support.": ["负责董事会层面方向、合作伙伴资源、泰国工业土地协调和重大项目支持。", "รับผิดชอบทิศทางระดับคณะกรรมการ ทรัพยากรพันธมิตร การประสานที่ดินอุตสาหกรรมในไทย และการสนับสนุนโครงการสำคัญ"],
+        "Chairman of the Board": ["董事长", "ประธานกรรมการ"],
+        "公司董事长": ["公司董事长", "ประธานกรรมการบริษัท"],
+        "ประธานกรรมการบริษัท": ["ประธานกรรมการบริษัท", "ประธานกรรมการบริษัท"],
         "Contact Thai Villa Group": ["联系 Thai Villa Group", "ติดต่อ Thai Villa Group"],
         "Send your land size, target product, preferred style, and budget range. We will prepare a suitable proposal.": ["发送土地面积、目标产品、偏好风格和预算范围，我们会准备合适方案。", "ส่งขนาดที่ดิน ประเภทอาคาร สไตล์ที่ชอบ และงบประมาณ เราจะเตรียมข้อเสนอที่เหมาะสม"],
         "Email": ["邮箱", "อีเมล"],
@@ -1870,7 +2659,7 @@
       document.querySelectorAll(".lang-switch button").forEach((button) => {
         button.addEventListener("click", () => setLanguage(button.dataset.lang));
       });
-      document.querySelectorAll('a[href="#villa-types"], a[href="#hotel-interiors"], a[href="#apartment-interiors"]').forEach((link) => {
+      document.querySelectorAll('a[href="#villa-types"], a[href="#hotel-interiors"], a[href="#apartment-interiors"], a[href="#office-commercial-space"]').forEach((link) => {
         link.addEventListener("click", (event) => {
           event.preventDefault();
           const hash = link.getAttribute("href");
