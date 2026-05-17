@@ -46,6 +46,7 @@
         color: var(--ink);
         background: var(--white);
         letter-spacing: 0;
+        overflow-x: hidden;
       }
 
       img {
@@ -201,7 +202,10 @@
         min-height: 100vh;
         color: var(--white);
         overflow: hidden;
-        background: #090b0d;
+        background:
+          linear-gradient(90deg, rgba(7, 9, 12, 0.88), rgba(7, 9, 12, 0.42)),
+          url("assets/hero-sequence-02-hd.jpg") center / cover,
+          #090b0d;
       }
 
       .hero-video {
@@ -209,7 +213,9 @@
         inset: 0;
         z-index: 0;
         overflow: hidden;
-        background: #090b0d;
+        background:
+          url("assets/hero-sequence-02-hd.jpg") center / cover,
+          #090b0d;
       }
 
       .hero-video span {
@@ -231,7 +237,7 @@
       }
 
       .hero-video span:nth-child(2) {
-        background-image: url("assets/hero-clear-villa.avif");
+        background-image: url("assets/hero-sequence-02-hd.jpg");
         background-position: center 54%;
         transform-origin: 48% 58%;
         animation: cinematicHeroDriftB 36s infinite;
@@ -641,7 +647,7 @@
       }
 
       .office {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.2), rgba(22, 103, 199, 0.12)), url("assets/office-entry.webp");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.2), rgba(22, 103, 199, 0.12)), url("assets/site-photo-01.jpg");
       }
 
       .product-body {
@@ -739,7 +745,7 @@
       }
 
       .project-card:nth-child(4) .project-image {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/project-office-commercial-777.webp");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(11, 79, 159, 0.08)), url("assets/site-photo-09.jpg");
         background-position: center;
       }
 
@@ -1243,7 +1249,7 @@
       }
 
       .leader-photo {
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 1 / 1;
         min-height: 0;
         background: #eef4fb;
       }
@@ -1985,19 +1991,31 @@
           </div>
           <div class="hospitality-gallery">
             <figure class="hospitality-shot">
-              <img src="assets/office-interior-01.webp" alt="Modular office lounge and meeting area" />
+              <picture>
+                <source srcset="assets/office-interior-01.webp" type="image/webp" />
+                <img src="assets/site-photo-01.jpg" alt="Modular office lounge and meeting area" />
+              </picture>
               <figcaption>Executive Office Lounge</figcaption>
             </figure>
             <figure class="hospitality-shot">
-              <img src="assets/office-interior-02.webp" alt="Sales center modular commercial interior" />
+              <picture>
+                <source srcset="assets/office-interior-02.webp" type="image/webp" />
+                <img src="assets/site-photo-08.jpg" alt="Sales center modular commercial interior" />
+              </picture>
               <figcaption>Sales Center</figcaption>
             </figure>
             <figure class="hospitality-shot">
-              <img src="assets/office-interior-03.webp" alt="Commercial showroom modular building" />
+              <picture>
+                <source srcset="assets/office-interior-03.webp" type="image/webp" />
+                <img src="assets/site-photo-09.jpg" alt="Commercial showroom modular building" />
+              </picture>
               <figcaption>Commercial Showroom</figcaption>
             </figure>
             <figure class="hospitality-shot">
-              <img src="assets/office-interior-01.webp" alt="Site office and staff operation buildings" />
+              <picture>
+                <source srcset="assets/office-interior-01.webp" type="image/webp" />
+                <img src="assets/site-photo-01.jpg" alt="Site office and staff operation buildings" />
+              </picture>
               <figcaption>Site Office & Operations</figcaption>
             </figure>
           </div>
@@ -2263,7 +2281,7 @@
                 <ul class="leader-meta">
                   <li><b>ThaiVillaGroup Holdings</b><span>Chairman<br>泰墅集团控股 董事长</span></li>
                   <li><b>Southeast Asia Real Estate Association</b><span>Executive President<br>东南亚房地产业协会 执行会长</span></li>
-                  <li><b>Thailand Industrial Land Big Data Center</b><span>Executive President<br>泰国工业地产大数据中心 执行会长</span></li>
+                  <li><b>Thailand Industrial Land Big Data Center</b><span>Managing Director<br>泰国工业地产大数据中心 常务主任</span></li>
                 </ul>
               </div>
             </article>
@@ -2593,7 +2611,7 @@
         "Executive President<br>东南亚房地产业协会 执行会长": ["执行会长<br>东南亚房地产业协会 执行会长", "นายกบริหาร<br>สมาคมอสังหาริมทรัพย์เอเชียตะวันออกเฉียงใต้"],
         "Vice Secretary General<br>东南亚房地产业协会 副秘书长": ["副秘书长<br>东南亚房地产业协会 副秘书长", "รองเลขาธิการ<br>สมาคมอสังหาริมทรัพย์เอเชียตะวันออกเฉียงใต้"],
         "Thailand Industrial Land Big Data Center": ["泰国工业地产大数据中心", "ศูนย์ข้อมูลขนาดใหญ่ที่ดินอุตสาหกรรมแห่งประเทศไทย"],
-        "Executive President<br>泰国工业地产大数据中心 执行会长": ["执行会长<br>泰国工业地产大数据中心 执行会长", "นายกบริหาร<br>ศูนย์ข้อมูลขนาดใหญ่ที่ดินอุตสาหกรรมแห่งประเทศไทย"],
+        "Managing Director<br>泰国工业地产大数据中心 常务主任": ["常务主任<br>泰国工业地产大数据中心 常务主任", "กรรมการผู้จัดการ<br>ศูนย์ข้อมูลขนาดใหญ่ที่ดินอุตสาหกรรมแห่งประเทศไทย"],
         "Deputy Director<br>泰国工业地产大数据中心 副主任": ["副主任<br>泰国工业地产大数据中心 副主任", "รองผู้อำนวยการ<br>ศูนย์ข้อมูลขนาดใหญ่ที่ดินอุตสาหกรรมแห่งประเทศไทย"],
         "Role": ["职务", "ตำแหน่ง"],
         "Chief Executive Officer": ["首席执行官", "ประธานเจ้าหน้าที่บริหาร"],
