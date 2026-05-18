@@ -204,7 +204,7 @@
         overflow: hidden;
         background:
           linear-gradient(90deg, rgba(7, 9, 12, 0.88), rgba(7, 9, 12, 0.42)),
-          url("assets/hero-sequence-02-hd.jpg") center / cover,
+          url("assets/hero-premium-01.jpg") center / cover,
           #090b0d;
       }
 
@@ -214,7 +214,7 @@
         z-index: 0;
         overflow: hidden;
         background:
-          url("assets/hero-sequence-02-hd.jpg") center / cover,
+          url("assets/hero-premium-01.jpg") center / cover,
           #090b0d;
       }
 
@@ -229,7 +229,7 @@
       }
 
       .hero-video span:nth-child(1) {
-        background-image: url("assets/hero-sequence-01-hd.jpg");
+        background-image: url("assets/hero-premium-01.jpg");
         background-position: center 46%;
         transform-origin: 62% 48%;
         animation: cinematicHeroDriftA 36s infinite;
@@ -237,7 +237,7 @@
       }
 
       .hero-video span:nth-child(2) {
-        background-image: url("assets/hero-sequence-02-hd.jpg");
+        background-image: url("assets/hero-premium-03.jpg");
         background-position: center 54%;
         transform-origin: 48% 58%;
         animation: cinematicHeroDriftB 36s infinite;
@@ -245,7 +245,7 @@
       }
 
       .hero-video span:nth-child(3) {
-        background-image: url("assets/hero-sequence-03-hd.jpg");
+        background-image: url("assets/hero-premium-05.jpg");
         background-position: center 48%;
         transform-origin: 58% 48%;
         animation: cinematicHeroDriftC 36s infinite;
@@ -253,7 +253,7 @@
       }
 
       .hero-video span:nth-child(4) {
-        background-image: url("assets/hero-sequence-04-hd.jpg");
+        background-image: url("assets/hero-premium-06.jpg");
         background-position: center 50%;
         transform-origin: 54% 54%;
         animation: cinematicHeroDriftD 36s infinite;
@@ -647,7 +647,8 @@
       }
 
       .office {
-        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.2), rgba(22, 103, 199, 0.12)), url("assets/site-photo-01.jpg");
+        background-image: linear-gradient(135deg, rgba(7, 27, 58, 0.08), rgba(13, 14, 11, 0.06)), url("assets/office-building-entry.jpg");
+        background-position: center center;
       }
 
       .product-body {
@@ -1249,9 +1250,10 @@
       }
 
       .leader-photo {
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 4 / 3;
         min-height: 0;
-        background: #eef4fb;
+        padding: 18px;
+        background: linear-gradient(180deg, #f7fbff, #edf4fb);
       }
 
       .leader-photo img,
@@ -1259,11 +1261,11 @@
         width: 100%;
         height: 100%;
         display: block;
-        object-fit: cover;
       }
 
       .leader-photo img {
-        object-position: center top;
+        object-fit: contain;
+        object-position: center center;
       }
 
       .leader-body {
@@ -1712,6 +1714,431 @@
         }
 
       }
+
+      /* Premium homepage refinement */
+      .topbar {
+        background: rgba(10, 10, 9, 0.58);
+        border-bottom-color: rgba(238, 228, 210, 0.13);
+      }
+
+      .nav {
+        min-height: 58px;
+      }
+
+      .brand {
+        flex-basis: 190px;
+        max-width: 190px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .brand > span {
+        font-size: 15px;
+        line-height: 1.05;
+      }
+
+      .brand small {
+        max-width: 150px;
+        margin-top: 4px;
+        color: rgba(242, 233, 219, 0.62);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 8px;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .menu {
+        gap: clamp(10px, 1.2vw, 18px);
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .menu a {
+        opacity: 0.84;
+        transition: opacity 180ms ease, color 180ms ease;
+      }
+
+      .menu a:hover {
+        color: #f2e9db;
+        opacity: 1;
+      }
+
+      .lang-switch {
+        border-color: rgba(242, 233, 219, 0.18);
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.16);
+      }
+
+      .lang-switch button {
+        min-width: 30px;
+        height: 26px;
+        border-radius: 999px;
+        font-size: 10px;
+        font-weight: 700;
+      }
+
+      .nav-cta {
+        min-height: 30px;
+        padding: 0 12px;
+        border-color: rgba(242, 233, 219, 0.24);
+        border-radius: 999px;
+        color: rgba(242, 233, 219, 0.88);
+        background: rgba(0, 0, 0, 0.16);
+        box-shadow: none;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(7, 7, 6, 0.9), rgba(7, 7, 6, 0.36)),
+          url("assets/hero-premium-01.jpg") center / cover,
+          #070706;
+      }
+
+      .hero::before {
+        background:
+          radial-gradient(circle at 70% 42%, rgba(197, 157, 92, 0.18), transparent 32%),
+          linear-gradient(90deg, rgba(5, 5, 4, 0.9), rgba(5, 5, 4, 0.48) 52%, rgba(5, 5, 4, 0.18)),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.62));
+      }
+
+      .hero-brand-lockup {
+        width: min(250px, 58vw);
+        margin-bottom: 12px;
+        transform: translateY(-16px);
+      }
+
+      .eyebrow {
+        color: rgba(242, 233, 219, 0.86);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+      }
+
+      .hero h1 {
+        max-width: 780px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(42px, 6.4vw, 84px);
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 560px;
+        margin-top: 22px;
+        color: rgba(248, 244, 237, 0.82);
+        font-size: 16px;
+        line-height: 1.85;
+      }
+
+      .hero-actions {
+        margin-top: 30px;
+      }
+
+      .btn,
+      .nav-cta {
+        border-radius: 999px;
+      }
+
+      .btn {
+        min-height: 42px;
+        padding: 0 18px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .btn-primary {
+        color: #11110f;
+        background: #e9d8b7;
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+      }
+
+      .hero .btn-secondary {
+        color: rgba(248, 244, 237, 0.88);
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(242, 233, 219, 0.26);
+      }
+
+      .hero-note,
+      .hero-metrics {
+        display: none;
+      }
+
+      section {
+        padding: 104px 0;
+      }
+
+      .solution-band {
+        padding: 34px 0;
+        color: #f2e9db;
+        background: #0d0e0b;
+      }
+
+      .solution-item {
+        min-height: 118px;
+        padding: 0 26px 0 0;
+        border-right-color: rgba(242, 233, 219, 0.14);
+      }
+
+      .solution-item strong {
+        color: #f8f4ed;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      .solution-item span {
+        color: rgba(248, 244, 237, 0.62);
+        font-size: 13px;
+      }
+
+      .advantage,
+      .products,
+      .projects,
+      .capabilities,
+      .leadership {
+        background: #f6f1e8;
+      }
+
+      .products {
+        background: #0f100d;
+        color: #f8f4ed;
+      }
+
+      .products .section-head h2,
+      .products .product-body h3 {
+        color: #f8f4ed;
+      }
+
+      .products .section-head p,
+      .products .product-body p,
+      .products .spec-list li {
+        color: rgba(248, 244, 237, 0.68);
+      }
+
+      .section-head h2,
+      .advantage-lead h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 500;
+        color: #151512;
+      }
+
+      .section-head p,
+      .advantage-card p,
+      .project-body p,
+      .factory-item p,
+      .step p {
+        color: #6f6a60;
+      }
+
+      .advantage-lead,
+      .advantage-card,
+      .product-card,
+      .project-card,
+      .factory-item,
+      .step,
+      .contact-panel {
+        border-color: rgba(39, 38, 31, 0.11);
+        border-radius: 4px;
+        box-shadow: none;
+      }
+
+      .advantage-lead {
+        color: #f8f4ed;
+        background: linear-gradient(135deg, #11110f, #2f3128);
+      }
+
+      .advantage-lead h2,
+      .advantage-lead p {
+        color: #f8f4ed;
+      }
+
+      .advantage-card span,
+      .tag,
+      .project-meta span,
+      .capability-tags span {
+        color: #3f4d35;
+        background: rgba(63, 77, 53, 0.1);
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .product-card {
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        background: #171813;
+        border-color: rgba(242, 233, 219, 0.12);
+      }
+
+      .product-visual {
+        height: auto;
+        min-height: 360px;
+      }
+
+      .product-body {
+        padding: 34px;
+      }
+
+      .product-body h3,
+      .project-body h3,
+      .factory-item h3,
+      .step h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 500;
+        color: #151512;
+      }
+
+      .products .product-body h3 {
+        color: #f8f4ed;
+      }
+
+      .spec-list li {
+        border-top-color: rgba(242, 233, 219, 0.12);
+      }
+
+      .spec-list b {
+        color: inherit;
+      }
+
+      .projects {
+        background: #f8f4ed;
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .project-image {
+        min-height: 300px;
+      }
+
+      .project-main .project-image {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.14)), url("assets/villa-use-private-land.jfif");
+      }
+
+      .project-card:nth-child(2) .project-image {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.14)), url("assets/villa-use-resort-rental.jfif");
+      }
+
+      .project-card:nth-child(3) .project-image {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.14)), url("assets/villa-use-pool-villa.jfif");
+      }
+
+      .project-card:nth-child(4) .project-image {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.14)), url("assets/villa-use-staff-housing.jfif");
+      }
+
+      .project-body {
+        padding: 26px;
+      }
+
+      .capability-panel {
+        border-color: rgba(39, 38, 31, 0.11);
+        border-radius: 4px;
+        background: #fffaf2;
+        box-shadow: none;
+      }
+
+      .capability-copy h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 500;
+        color: #151512;
+      }
+
+      .contact {
+        background:
+          linear-gradient(90deg, rgba(248, 244, 237, 0.97), rgba(248, 244, 237, 0.88)),
+          url("assets/site-photo-08.jpg") center / cover;
+      }
+
+      .footer {
+        color: rgba(248, 244, 237, 0.64);
+        background: #0d0e0b;
+      }
+
+      @media (max-width: 1180px) {
+        .topbar {
+          background: rgba(10, 10, 9, 0.78);
+        }
+
+        .nav {
+          min-height: 62px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .product-card,
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .product-visual {
+          min-height: 280px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .brand {
+          flex-basis: 156px;
+          max-width: 156px;
+        }
+
+        .brand > span {
+          font-size: 14px;
+        }
+
+        .brand small {
+          font-size: 7px;
+          letter-spacing: 0.12em;
+        }
+
+        .hero,
+        .hero-inner {
+          min-height: 690px;
+        }
+
+        .hero-brand-lockup {
+          width: min(220px, 68vw);
+          transform: translateY(-8px);
+        }
+
+        .hero h1 {
+          font-size: clamp(38px, 12vw, 58px);
+        }
+
+        .hero p {
+          font-size: 15px;
+        }
+
+        .hero-actions {
+          gap: 10px;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .lang-switch button {
+          min-width: 30px;
+          height: 26px;
+        }
+
+        .project-image {
+          min-height: 260px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1943,40 +2370,40 @@
       <section class="projects" id="projects">
         <div class="shell">
           <div class="section-head">
-            <h2>Project directions for Thailand development</h2>
-            <p>Reference directions for resort communities, workforce accommodation, hotel expansion, and commercial modular developments.</p>
+            <h2>Signature project directions</h2>
+            <p>A focused homepage overview for private land villas, resort rental villas, pool villas, and staff housing or apartment blocks in Thailand.</p>
           </div>
           <div class="project-grid">
             <article class="project-card project-main">
               <div class="project-image" role="img" aria-label="Resort villa project"></div>
               <div class="project-body">
-                <h3>Resort & Rental Villa Community</h3>
-                <p>Industrialized villa products arranged for resort operations, rental income, outdoor living, and guest circulation.</p>
-                <div class="project-meta"><span>50-200 sqm villas</span><span>Pool deck option</span><span>Rental operation ready</span></div>
+                <h3>Private Land Villas</h3>
+                <p>Premium modular villas for owners who already have land and want a controlled design, build, and delivery path.</p>
+                <div class="project-meta"><span>Private Land</span><span>50-200 sqm</span><span>Quotation Ready</span></div>
               </div>
             </article>
             <article class="project-card">
               <div class="project-image" role="img" aria-label="Modular apartment project"></div>
               <div class="project-body">
-                <h3>Workforce Apartment Cluster</h3>
-                <p>Repeatable residential blocks for staff accommodation, rental income, and industrial park support facilities.</p>
-                <div class="project-meta"><span>Repeatable blocks</span><span>Fast rollout</span></div>
+                <h3>Resort Rental Villas</h3>
+                <p>Villa systems for resort operators and investors planning short-stay rental income and repeatable guest experiences.</p>
+                <div class="project-meta"><span>Resort Rental</span><span>Guest Circulation</span><span>Fast Rollout</span></div>
               </div>
             </article>
             <article class="project-card">
               <div class="project-image" role="img" aria-label="Boutique hotel suite project"></div>
               <div class="project-body">
-                <h3>Hotel Room System</h3>
-                <p>Room and suite modules designed to shorten hospitality delivery timelines and improve operating consistency.</p>
-                <div class="project-meta"><span>Guest rooms</span><span>Suite modules</span></div>
+                <h3>Pool Villas</h3>
+                <p>Higher-end villa direction for private residences and rental assets with outdoor leisure, pool deck, and tropical landscape planning.</p>
+                <div class="project-meta"><span>Pool Deck</span><span>Tropical Living</span><span>Premium Facade</span></div>
               </div>
             </article>
             <article class="project-card">
               <div class="project-image" role="img" aria-label="Office and commercial modular project"></div>
               <div class="project-body">
-                <h3>Office & Commercial Space</h3>
-                <p>Modular office, sales center, showroom, and site office systems for project launch, sales operations, and commercial use.</p>
-                <div class="project-meta"><span>Site Office</span><span>Sales Center</span><span>Showroom</span></div>
+                <h3>Staff Housing / Apartment Blocks</h3>
+                <p>Repeatable accommodation systems for project teams, factory staff, resort employees, and rental apartment operations.</p>
+                <div class="project-meta"><span>Staff Housing</span><span>Apartment Blocks</span><span>Workforce Use</span></div>
               </div>
             </article>
           </div>
@@ -2176,19 +2603,19 @@
           </div>
           <div class="hospitality-gallery" aria-label="Apartment interior renderings">
             <figure class="hospitality-shot">
-              <img src="assets/apartment-interior-01.jpg" alt="Apartment interior rendering 1" />
+              <img src="assets/apartment-interior-01.webp" alt="Apartment interior rendering 1" />
               <figcaption>Apartment Interior 01</figcaption>
             </figure>
             <figure class="hospitality-shot">
-              <img src="assets/apartment-interior-02.jpg" alt="Apartment interior rendering 2" />
+              <img src="assets/apartment-interior-02.webp" alt="Apartment interior rendering 2" />
               <figcaption>Apartment Interior 02</figcaption>
             </figure>
             <figure class="hospitality-shot">
-              <img src="assets/apartment-interior-03.jpg" alt="Apartment interior rendering 3" />
+              <img src="assets/apartment-interior-03.webp" alt="Apartment interior rendering 3" />
               <figcaption>Apartment Interior 03</figcaption>
             </figure>
             <figure class="hospitality-shot">
-              <img src="assets/apartment-interior-04.jpg" alt="Apartment interior rendering 4" />
+              <img src="assets/apartment-interior-04.webp" alt="Apartment interior rendering 4" />
               <figcaption>Apartment Interior 04</figcaption>
             </figure>
           </div>
@@ -2438,6 +2865,24 @@
         "Project launch and B2B operations": ["项目启动和B端运营", "เริ่มโครงการและการดำเนินงาน B2B"],
         "Project directions for Thailand development": ["泰国项目开发方向", "แนวทางโครงการสำหรับการพัฒนาในไทย"],
         "Reference directions for resort communities, workforce accommodation, hotel expansion, and commercial modular developments.": ["展示度假社区、员工住宿、酒店扩建和商业装配式开发的参考方向。", "แนวทางอ้างอิงสำหรับชุมชนรีสอร์ต ที่พักแรงงาน การขยายโรงแรม และอาคารโมดูลาร์เชิงพาณิชย์"],
+        "Signature project directions": ["核心项目方向", "แนวทางโครงการหลัก"],
+        "A focused homepage overview for private land villas, resort rental villas, pool villas, and staff housing or apartment blocks in Thailand.": ["首页重点展示私人土地别墅、度假村出租别墅、泳池别墅，以及员工住房/公寓楼方向。", "ภาพรวมหน้าแรกสำหรับวิลล่าบนที่ดินส่วนตัว วิลล่าให้เช่าในรีสอร์ต พูลวิลล่า และที่พักพนักงานหรืออพาร์ตเมนต์ในประเทศไทย"],
+        "Private Land Villas": ["私人土地别墅", "วิลล่าบนที่ดินส่วนตัว"],
+        "Premium modular villas for owners who already have land and want a controlled design, build, and delivery path.": ["面向已拥有土地并希望获得可控设计、建造和交付路径的高端模块化别墅。", "วิลล่าโมดูลาร์ระดับพรีเมียมสำหรับเจ้าของที่ดินที่ต้องการกระบวนการออกแบบ ก่อสร้าง และส่งมอบที่ควบคุมได้"],
+        "Quotation Ready": ["可报价", "พร้อมเสนอราคา"],
+        "Resort Rental Villas": ["度假村出租别墅", "วิลล่าให้เช่าในรีสอร์ต"],
+        "Villa systems for resort operators and investors planning short-stay rental income and repeatable guest experiences.": ["适用于度假村运营方和投资者，用于短租收益和可复制入住体验的别墅系统。", "ระบบวิลล่าสำหรับผู้ประกอบการรีสอร์ตและนักลงทุนที่วางแผนรายได้จากการเช่าระยะสั้นและประสบการณ์ผู้เข้าพักที่ทำซ้ำได้"],
+        "Guest Circulation": ["客人动线", "การสัญจรของแขก"],
+        "Fast Rollout": ["快速落地", "เปิดตัวได้รวดเร็ว"],
+        "Pool Villas": ["泳池别墅", "พูลวิลล่า"],
+        "Higher-end villa direction for private residences and rental assets with outdoor leisure, pool deck, and tropical landscape planning.": ["面向私人住宅和出租资产的高端别墅方向，包含户外休闲、泳池平台和热带景观规划。", "แนวทางวิลล่าระดับสูงสำหรับบ้านพักส่วนตัวและสินทรัพย์ให้เช่า พร้อมพื้นที่พักผ่อนกลางแจ้ง ดาดฟ้าสระว่ายน้ำ และภูมิทัศน์เขตร้อน"],
+        "Pool Deck": ["泳池平台", "ดาดฟ้าสระว่ายน้ำ"],
+        "Tropical Living": ["热带生活", "การอยู่อาศัยแบบทรอปิคอล"],
+        "Premium Facade": ["高端立面", "ฟาซาดระดับพรีเมียม"],
+        "Staff Housing / Apartment Blocks": ["员工住房 / 公寓楼", "ที่พักพนักงาน / อาคารอพาร์ตเมนต์"],
+        "Repeatable accommodation systems for project teams, factory staff, resort employees, and rental apartment operations.": ["面向项目团队、工厂员工、度假村员工和出租公寓运营的可复制住宿系统。", "ระบบที่พักที่ทำซ้ำได้สำหรับทีมโครงการ พนักงานโรงงาน พนักงานรีสอร์ต และการดำเนินงานอพาร์ตเมนต์ให้เช่า"],
+        "Apartment Blocks": ["公寓楼", "อาคารอพาร์ตเมนต์"],
+        "Workforce Use": ["员工住宿用途", "การใช้งานสำหรับแรงงาน"],
         "Resort & Rental Villa Community": ["度假及出租别墅社区", "ชุมชนรีสอร์ตและวิลล่าให้เช่า"],
         "Industrialized villa products arranged for resort operations, rental income, outdoor living, and guest circulation.": ["面向度假村运营、出租收益、户外生活和客人动线组织的工业化别墅产品。", "ผลิตภัณฑ์วิลล่าอุตสาหกรรมที่จัดวางเพื่อการดำเนินงานรีสอร์ต รายได้ค่าเช่า พื้นที่กลางแจ้ง และการสัญจรของแขก"],
         "Workforce Apartment Cluster": ["员工公寓组团", "กลุ่มอพาร์ตเมนต์แรงงาน"],
